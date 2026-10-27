@@ -1,3 +1,0 @@
-event_id,cycle_id,entity_type,record_id,event_type,actor_id,event_time,reason
-EVT-000001,CYCLE-2026-H2,goal,GOAL-EMP-000001-00001,created,EMP-000001,2026-10-01T09:00:00,Initial goal creation
-EVT-000002,CYCLE-2026-H1,goal,GOAL-EMP-000001-00001,updated,MGR-000001,2026-10-02T10:00:00,
