@@ -257,7 +257,6 @@ function WorkflowPanel() {
 
   async function submitModal(event) {
     event.preventDefault();
-
     if (!activeModal) return;
 
     setBusy(true);
@@ -265,52 +264,43 @@ function WorkflowPanel() {
     setError("");
 
     try {
-      if (activeModal.type === "review") {
-        const { item } = activeModal;
+      const modal = activeModal;
 
-        await request(
-          `/api/reviews/${encodeURIComponent(item.review_id)}`,
-          {
-            method: "PATCH",
-            body: JSON.stringify({
-              status: modalData.status,
-              reason: modalData.reason.trim(),
-              actor_id: modalData.actor_id.trim(),
-            }),
-          }
-        );
+      if (modal.type === "review") {
+        const { item } = modal;
+        await request(`/api/reviews/${encodeURIComponent(item.review_id)}`, {
+          method: "PATCH",
+          body: JSON.stringify({
+            status: modalData.status,
+            reason: modalData.reason.trim(),
+            actor_id: modalData.actor_id.trim(),
+          }),
+        });
 
-        await loadWorkflowData();
+        setActiveModal(null);
         showMessage(`Review ${item.review_id} updated successfully.`);
-        await new Promise((resolve) => setTimeout(resolve, 1500));
-        setActiveModal(null);
       } else {
-        const { item } = activeModal;
+        const { item } = modal;
+        await request(`/api/development-plans/${encodeURIComponent(item.plan_id)}/approval`, {
+          method: "PATCH",
+          body: JSON.stringify({
+            approval_status: modalData.approval_status,
+            manager_id: modalData.manager_id.trim(),
+            reason: modalData.reason.trim(),
+          }),
+        });
 
-        await request(
-          `/api/development-plans/${encodeURIComponent(item.plan_id)}/approval`,
-          {
-            method: "PATCH",
-            body: JSON.stringify({
-              approval_status: modalData.approval_status,
-              manager_id: modalData.manager_id.trim(),
-              reason: modalData.reason.trim(),
-            }),
-          }
-        );
-
-        await loadWorkflowData();
-        showMessage(`Development plan ${item.plan_id} updated successfully.`);
-        await new Promise((resolve) => setTimeout(resolve, 1500));
         setActiveModal(null);
+        showMessage(`Development plan ${item.plan_id} updated successfully.`);
       }
+
+      await loadWorkflowData();
     } catch (err) {
       showError(err.message);
     } finally {
       setBusy(false);
     }
   }
-
   const selectedEmployeeReviews = reviews.filter(
     (item) => item.employee_id === selectedEmployeeId
   );
@@ -1119,3 +1109,4 @@ function WorkflowPanel() {
 }
 
 export default WorkflowPanel;
+
