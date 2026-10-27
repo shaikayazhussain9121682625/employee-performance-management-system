@@ -1,86 +1,131 @@
+# Employee Performance Management System — Database Schema
 
-# Employee Performance Management System — Data Schema
+## 1. Purpose and Scope
 
-## 1. Purpose
+This document describes the implemented SQLAlchemy database schema and the relationships between its entities. The application uses SQLite through Flask-SQLAlchemy. Generated data is synthetic.
 
-This document describes the entities and relationships used by
-the Employee Performance Management System.
+The database contains 11 tables: managers, employees, review_cycles, goals, key_results, check_ins, competencies, reviews, feedback, development_plans, and event_history.
 
-All generated records are synthetic.
+The generated CSV/JSON datasets and the SQL seed export are documented separately. The ground-truth labels are stored in `data/generated/ground_truth.csv` and `data/generated/ground_truth.json` and must not be used as application input features.
 
-## 2. Entities
+## 2. Entities and Keys
 
-### Employee
-- Primary key: employee_id
-- Stores employee identity, department, job title, hire date,
-  employment status, and manager relationship.
+| Entity | Primary key | Foreign keys and relationships |
+|---|---|---|
+| Manager | `manager_id` | One manager may supervise many employees. |
+| Employee | `employee_id` | Optional `manager_id` references `managers.manager_id`. |
+| ReviewCycle | `cycle_id` | One cycle may contain many goals. |
+| Goal | `goal_id` | Required `employee_id` and `cycle_id`; belongs to one employee and one cycle. |
+| KeyResult | `key_result_id` | Required `goal_id`; belongs to one goal. |
+| CheckIn | `check_in_id` | Required `employee_id` and `cycle_id`. |
+| Competency | `competency_id` | Competency name is unique. |
+| Review | `review_id` | Required `employee_id`, `cycle_id`, and `reviewer_id`. Reviewer references a manager. |
+| Feedback | `feedback_id` | Required `employee_id` and `cycle_id`; optional `competency_id`. |
+| DevelopmentPlan | `development_plan_id` | Required `employee_id` and `review_id`. |
+| EventHistory | `event_id` | Required `cycle_id`; affected entity is recorded using `entity_type` and `record_id`. |
 
-### Manager
-- Primary key: manager_id
-- Stores manager identity and department.
+All listed primary keys are declared by the SQLAlchemy models. Employee and manager email addresses are unique. Competency names are unique.
 
-### ReviewCycle
-- Primary key: cycle_id
-- Stores review period, start date, end date, and lifecycle status.
+## 3. Relationship Cardinalities
 
-### Goal
-- Primary key: goal_id
-- Foreign keys: employee_id, cycle_id
-- Stores the employee's performance goal, status, and dates.
+- Manager to Employee: one-to-many; an employee may have no assigned manager because `manager_id` is nullable.
+- Employee to Goal: one-to-many.
+- ReviewCycle to Goal: one-to-many.
+- Goal to KeyResult: one-to-many in the ORM relationship. Key results require a parent goal.
+- Employee to CheckIn: one-to-many.
+- ReviewCycle to CheckIn: one-to-many.
+- Employee to Review: one-to-many.
+- Manager to Review: one-to-many through `reviewer_id`.
+- Employee to Feedback: one-to-many.
+- Competency to Feedback: one-to-many; feedback may omit its competency.
+- ReviewCycle to Feedback: one-to-many.
+- Employee to DevelopmentPlan: one-to-many.
+- Review to DevelopmentPlan: one-to-many.
+- ReviewCycle to EventHistory: one-to-many.
 
-### KeyResult
-- Primary key: key_result_id
-- Foreign key: goal_id
-- Stores a measurable result associated with a goal.
+The implemented schema does not define a direct many-to-many bridge table. A future many-to-many relationship, such as employees and peer reviewers, should use an explicit association table if it becomes a requirement.
 
-### CheckIn
-- Primary key: check_in_id
-- Foreign keys: employee_id, cycle_id
-- Stores progress updates, notes, and check-in dates.
+## 4. Field Types and Nullability
 
-### Competency
-- Primary key: competency_id
-- Stores competency definitions and descriptions.
+The SQLAlchemy model file `backend/models/__init__.py` is the authoritative source for implemented column types and nullability.
 
-### Feedback
-- Primary key: feedback_id
-- Foreign keys: employee_id, competency_id, cycle_id
-- Stores competency feedback, author, evidence, and date.
+- `String(n)`: bounded string column with the specified maximum length.
+- `Text`: text column without a model-defined maximum length.
+- `Date`: calendar date.
+- `DateTime`: timestamp.
+- `Float`: floating-point numeric value.
+- `nullable=False`: required database field.
+- `nullable=True`: optional database field.
+- `unique=True`: unique constraint.
+- `primary_key=True`: primary-key constraint.
 
-### Review
-- Primary key: review_id
-- Foreign keys: employee_id, cycle_id, reviewer_id
-- Stores review decisions, scores, status, and timestamps.
+Important optional fields include `Employee.manager_id`, `Competency.description`, `CheckIn.notes`, `CheckIn.rationale`, `Feedback.competency_id`, `Feedback.author_id`, `Feedback.evidence_reference`, `EventHistory.actor_id`, and `EventHistory.reason`.
 
-### DevelopmentPlan
-- Primary key: development_plan_id
-- Foreign keys: employee_id, review_id
-- Stores development objectives, actions, and target dates.
+The models do not declare database-level CHECK constraints for all status values, progress ranges, rating ranges, or date-ordering rules. Those rules must be enforced and tested in application or data-validation logic.
 
-## 3. Relationships
+## 5. Lifecycle and Integrity Rules
 
-- One manager can manage many employees.
-- One employee can have many goals.
-- One review cycle can contain many goals and check-ins.
-- One goal can have many key results.
-- One employee can have many check-ins.
-- One competency can appear in feedback for many employees.
-- One employee can have many reviews across different cycles.
-- One review can have many development actions.
+The project requires the following business rules:
 
-## 4. Integrity Rules
+1. Primary keys must be unique and stable.
+2. Foreign-key values must reference existing parent records.
+3. Review-cycle end dates must not precede start dates.
+4. Normal progress percentages must be within the documented percentage scale.
+5. A reviewer must have an appropriate relationship to the employee.
+6. Changes to a closed review cycle must not be accepted silently.
+7. Feedback should preserve author attribution and supporting evidence.
+8. Important state changes should be recorded with timestamps, actors, and reasons.
+9. Derived values should be calculated from source records rather than assigned independently.
+10. Deliberate edge cases must remain labelled and distinguishable from unexpected defects.
 
-- Primary keys must be unique and stable.
-- Foreign keys must reference existing records.
-- End dates must not precede start dates.
-- Progress values must stay within the defined scale.
-- Reviewers must have a valid relationship to the employee.
-- Closed review cycles must not accept silent edits.
-- Feedback must retain author and evidence traceability.
-- Changes to important records must be auditable.
+These are intended business rules; the existence of a model column does not mean every rule is automatically enforced by the database.
 
-## 5. Implementation Note
+## 6. Event History and Audit Limitations
 
-This is the initial conceptual schema. The final implementation
-must define all fields, data types, constraints, optional
-relationships, lifecycle states, and audit-history structures.
+`EventHistory` contains `event_id`, `cycle_id`, `entity_type`, `record_id`, `event_type`, `actor_id`, `event_time`, and `reason`.
+
+The `cycle_id` field has a foreign key to `review_cycles`. The combination of `entity_type` and `record_id` identifies the affected record at the application level; it is not a foreign key to every possible entity table.
+
+The current model does not enforce append-only history, immutable event records, version sequencing, or mandatory reasons for all state changes. These capabilities must not be claimed as fully implemented without additional code and tests.
+
+## 7. Feedback Attribution and Development Plan Approvals
+
+Feedback currently stores `author_id` as a nullable string without a foreign-key constraint. This allows the deliberate missing-author test case, but it does not guarantee that a non-null author identifies a valid person. Reviewer type and self/manager/peer feedback type are not separate model fields.
+
+Development plans currently store an employee, review, objective, action, target date, and status. Approval identity, approval timestamps, and approval-event history are not defined as dedicated fields in the current model.
+
+These are documented implementation limitations, not guarantees of existing functionality.
+
+## 8. Deliberate Edge Cases
+
+The generated dataset includes five labelled test cases:
+
+1. Goal identifier and recorded owner mismatch.
+2. Check-in progress above the normal scale without a rationale.
+3. Reviewer not matching the employee's assigned manager.
+4. Feedback without author attribution and an evidence reference.
+5. A change in a closed review cycle without a reason.
+
+The corresponding ground-truth files document expected labels. Validation should report these deliberate cases separately from unexpected errors. The current validator reports findings; this does not mean all related business rules are enforced at write time.
+
+## 9. Data and Reproducibility
+
+- Generator: `scripts/generate_data.py`
+- Validator: `scripts/validate_data.py`
+- Database verification: `scripts/verify_database.py`
+- SQL export: `scripts/export_sql.py`
+- SQL restore verification: `scripts/verify_sql_export.py`
+- Source manifest: `data/generated/source_manifest.json`
+- Data dictionary: `docs/data_dictionary.md`
+
+The configured seed is `20261022`. The generated source manifest records the generator version, seed, reference date, and synthetic-data provenance.
+
+## 10. Known Limitations and Future Improvements
+
+- Add explicit database or service-level validation for status enums, date ordering, progress limits, and score ranges.
+- Enforce reviewer-to-employee relationship rules during review creation.
+- Add an author relationship for feedback while retaining a documented way to test missing attribution.
+- Introduce append-only audit events and protect history from silent modification.
+- Add explicit approval records and lifecycle transitions for development plans.
+- Add relationship tables if self, peer, or cross-functional reviewer assignments require many-to-many associations.
+- Extend automated tests to verify each required business rule and its deliberate exception cases.

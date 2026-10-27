@@ -42,7 +42,7 @@ def detect_exceptions():
                 ),
             })
 
-    # Rule 2: Check-in progress must be within 0–100 unless rationale exists.
+    # Rule 2: Check-in progress must be within 0-100 unless rationale exists.
     for checkin in CheckIn.query.yield_per(500):
         if (
             not 0 <= checkin.progress_percent <= 100
@@ -56,7 +56,7 @@ def detect_exceptions():
                 "rule": "INVALID_PROGRESS_WITHOUT_RATIONALE",
                 "message": (
                     f"Progress is {checkin.progress_percent}, "
-                    "outside the permitted 0–100 range, with no rationale."
+                    "outside the permitted 0-100 range, with no rationale."
                 ),
                 "recommended_action": (
                     "Review the source update and request an explanation."
@@ -64,10 +64,14 @@ def detect_exceptions():
             })
 
     # Rule 3: A review's reviewer should match the employee's assigned manager.
+    # Load employees once to avoid querying separately for every review.
+    employees_by_id = {
+        employee.employee_id: employee
+        for employee in Employee.query.yield_per(500)
+    }
+
     for review in Review.query.yield_per(500):
-        employee = Employee.query.filter_by(
-            employee_id=review.employee_id
-        ).first()
+        employee = employees_by_id.get(review.employee_id)
 
         if employee and review.reviewer_id != employee.manager_id:
             findings.append({
@@ -103,9 +107,7 @@ def detect_exceptions():
                 "record_id": feedback.feedback_id,
                 "severity": "medium",
                 "rule": "FEEDBACK_TRACEABILITY_INCOMPLETE",
-                "message": (
-                    "Missing " + " and ".join(missing) + "."
-                ),
+                "message": "Missing " + " and ".join(missing) + ".",
                 "recommended_action": (
                     "Request the missing attribution or evidence. "
                     "Do not invent missing information."

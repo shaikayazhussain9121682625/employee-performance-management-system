@@ -1,4 +1,4 @@
-# Data Dictionary — Employee Performance Management System
+# Data Dictionary - Employee Performance Management System
 
 ## 1. Overview
 
@@ -226,3 +226,180 @@ These cases are expected test inputs. They should not be confused with unexpecte
 - Database verification: `scripts/verify_database.py`.
 
 Use the source manifest and validation scripts as the primary evidence for generated record counts and reproducibility.
+
+## 7. Technical Field Specifications
+
+This section documents field types, nullability, uniqueness, units, and validation expectations. CSV files do not enforce database constraints themselves. "Required" means the field is expected to contain a value in generated records; it does not automatically mean the database or application enforces that rule.
+
+### 7.1 Type conventions
+
+| Type | Meaning |
+|---|---|
+| String | Text identifier or descriptive text |
+| Integer | Whole number |
+| Decimal | Numeric value that may contain a fractional part |
+| Date | Date formatted as YYYY-MM-DD |
+| Timestamp | Date and time value |
+| Nullable | Empty values may be represented where explicitly allowed |
+| Primary key | Unique identifier for a record |
+| Foreign key | Identifier that references a record in another dataset |
+
+### 7.2 Managers
+
+| Field | Type | Required | Uniqueness / validation |
+|---|---|---|---|
+| manager_id | String | Yes | Primary key; immutable identifier |
+| full_name | String | Yes | Non-empty synthetic name |
+| email | String | Yes | Unique email; validate email format |
+| department | String | Yes | Non-empty department |
+
+### 7.3 Employees
+
+| Field | Type | Required | Uniqueness / validation |
+|---|---|---|---|
+| employee_id | String | Yes | Primary key; expected format EMP- followed by six digits |
+| full_name | String | Yes | Non-empty synthetic name |
+| email | String | Yes | Unique email; validate email format |
+| department | String | Yes | Non-empty department |
+| job_title | String | Yes | Non-empty job title |
+| hire_date | Date | Yes | Valid date |
+| employment_status | String | Yes | Observed values: active, inactive |
+| manager_id | String | Yes in generated data | Must reference an existing manager |
+
+### 7.4 Review cycles
+
+| Field | Type | Required | Uniqueness / validation |
+|---|---|---|---|
+| cycle_id | String | Yes | Primary key |
+| name | String | Yes | Non-empty cycle name |
+| start_date | Date | Yes | Valid date |
+| end_date | Date | Yes | Must not precede start_date |
+| status | String | Yes | Validator permits planned, active, closed; observed values: active, closed |
+
+### 7.5 Competencies
+
+| Field | Type | Required | Uniqueness / validation |
+|---|---|---|---|
+| competency_id | String | Yes | Primary key |
+| name | String | Yes | Unique, non-empty name |
+| description | String | Optional | Descriptive text |
+
+### 7.6 Goals
+
+| Field | Type | Required | Uniqueness / validation |
+|---|---|---|---|
+| goal_id | String | Yes | Primary key; expected format GOAL-EMP-000001-00001 |
+| employee_id | String | Yes | Must reference an existing employee |
+| cycle_id | String | Yes | Must reference an existing review cycle |
+| title | String | Yes | Non-empty goal title |
+| status | String | Yes | Permitted: not_started, in_progress, completed |
+| progress_percent | Integer | Yes | Percentage from 0 to 100 |
+| created_date | Date | Yes | Valid date |
+
+### 7.7 Key results
+
+| Field | Type | Required | Uniqueness / validation |
+|---|---|---|---|
+| key_result_id | String | Yes | Primary key |
+| goal_id | String | Yes | Must reference an existing goal |
+| description | String | Yes | Non-empty description |
+| target_value | Decimal | Yes | Must be greater than zero |
+| current_value | Decimal | Yes | Must be zero or greater and no greater than target_value |
+| unit | String | Yes | Measurement unit, such as a count or percentage |
+
+### 7.8 Check-ins
+
+| Field | Type | Required | Uniqueness / validation |
+|---|---|---|---|
+| check_in_id | String | Yes | Primary key |
+| employee_id | String | Yes | Must reference an existing employee |
+| cycle_id | String | Yes | Must reference an existing review cycle |
+| check_in_date | Date | Yes | Valid date |
+| progress_percent | Integer | Yes | Normally 0 to 100; out-of-range values without rationale are reported as expected or unexpected findings by validation |
+| notes | String | Optional | Check-in notes |
+| rationale | String | Optional | Explanation for reported progress; required by the validator when progress is outside 0 to 100 |
+
+### 7.9 Reviews
+
+| Field | Type | Required | Uniqueness / validation |
+|---|---|---|---|
+| review_id | String | Yes | Primary key; expected format REV-2026-000001 |
+| employee_id | String | Yes | Must reference an existing employee |
+| cycle_id | String | Yes | Must reference an existing review cycle |
+| reviewer_id | String | Yes | Must reference an existing manager and match the employee's assigned manager under the current validator |
+| score | Integer | Yes | Scale from 1 to 5 |
+| status | String | Yes | Permitted: draft, submitted, approved |
+| review_date | Date | Yes | Valid date |
+
+### 7.10 Feedback
+
+| Field | Type | Required | Uniqueness / validation |
+|---|---|---|---|
+| feedback_id | String | Yes | Primary key |
+| employee_id | String | Yes | Must reference an existing employee |
+| competency_id | String | Expected | Must reference an existing competency under the current validator |
+| cycle_id | String | Yes | Must reference an existing review cycle |
+| author_id | String | Expected | Must reference an existing manager under the current validator |
+| evidence_reference | String | Expected | Non-empty evidence reference under the current validator |
+| rating | Integer | Yes | Scale from 1 to 5 |
+| comments | String | Yes | Feedback text |
+| feedback_date | Date | Yes | Valid date |
+
+The feedback validator treats a missing author or evidence reference as a finding. The deliberately injected untraceable feedback case is retained as a test fixture.
+
+### 7.11 Development plans
+
+| Field | Type | Required | Uniqueness / validation |
+|---|---|---|---|
+| development_plan_id | String | Yes | Primary key |
+| employee_id | String | Yes | Must reference an existing employee |
+| review_id | String | Yes | Must reference an existing review |
+| objective | String | Yes | Non-empty development objective |
+| action | String | Yes | Non-empty planned action |
+| target_date | Date | Yes | Valid date |
+| status | String | Yes | Observed value: planned; the validator does not currently enforce a development-plan status enumeration |
+
+### 7.12 Event history
+
+| Field | Type | Required | Uniqueness / validation |
+|---|---|---|---|
+| event_id | String | Yes | Primary key |
+| cycle_id | String | Yes | Must reference an existing review cycle |
+| entity_type | String | Yes | Entity affected by the event |
+| record_id | String | Yes | Identifier of the affected record |
+| event_type | String | Yes | Recorded event type |
+| actor_id | String | Expected | Validator requires a non-empty actor ID |
+| event_time | Timestamp | Yes | Valid timestamp |
+| reason | String | Conditional | Required by the validator for an update in a closed cycle |
+
+The current validator checks the event's cycle and reason, but does not verify that record_id references an existing record in the declared entity_type.
+
+### 7.13 Ground truth
+
+| Field | Type | Required | Uniqueness / validation |
+|---|---|---|---|
+| case_id | String | Yes | Expected unique case identifier; the validator checks the five anomaly types but does not separately enforce case_id uniqueness |
+| entity_type | String | Yes | Must identify a supported entity type |
+| record_id | String | Yes | Must reference an existing record of the declared entity type |
+| anomaly_type | String | Yes | Exactly the five expected anomaly types must be present |
+| expected_label | String | Yes | Validator expects invalid |
+| description | String | Yes | Explanation of the deliberate test case |
+
+### 7.14 Cross-dataset validation rules
+
+The current validator checks primary-key uniqueness, required identifier values, selected foreign-key relationships, status values for review cycles/goals/reviews, numeric ranges, goal ID format and owner consistency, feedback traceability, event history rules, ground-truth references, and manifest row counts.
+
+The current validator does not comprehensively enforce every possible field constraint. In particular, it does not currently validate every date field's format, every status enumeration, all foreign-key relationships, all date ordering, or derived goal progress against key-result values.
+
+### 7.15 Units and interpretation
+
+- Goal and check-in progress: percentage, normally 0-100.
+- Review score: integer rating from 1-5.
+- Feedback rating: integer rating from 1-5.
+- Key-result values: numeric values interpreted using the associated unit field.
+- Dates: calendar dates.
+- Event times: timestamps.
+
+### 7.16 Implementation note
+
+This dictionary describes the generated CSV schema and the current validation script. A documented expectation is not necessarily enforced by the database schema or application. Where enforcement is incomplete, this document explicitly identifies the gap rather than implying that the system already prevents invalid data.

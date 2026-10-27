@@ -181,8 +181,16 @@ class Feedback(db.Model):
         nullable=False,
     )
 
-    # Nullable because the dataset deliberately includes a missing author.
+    # Nullable so the required untraceable-feedback anomaly can be represented.
     author_id = db.Column(db.String(20), nullable=True)
+
+    # Allowed values will be validated in the workflow/API layer.
+    feedback_type = db.Column(
+        db.String(20),
+        nullable=False,
+        default="manager",
+    )
+
     evidence_reference = db.Column(db.String(255), nullable=True)
     rating = db.Column(db.Float, nullable=False)
     comments = db.Column(db.Text, nullable=False)
@@ -211,6 +219,24 @@ class DevelopmentPlan(db.Model):
     target_date = db.Column(db.Date, nullable=False)
     status = db.Column(db.String(30), nullable=False)
 
+    # Approval workflow.
+    approval_status = db.Column(
+        db.String(20),
+        nullable=False,
+        default="pending",
+    )
+
+    approved_by = db.Column(
+        db.String(20),
+        db.ForeignKey("managers.manager_id"),
+        nullable=True,
+    )
+
+    approved_at = db.Column(
+        db.DateTime,
+        nullable=True,
+    )
+
 
 class EventHistory(db.Model):
     __tablename__ = "event_history"
@@ -235,3 +261,31 @@ class EventHistory(db.Model):
     )
 
     reason = db.Column(db.Text, nullable=True)
+
+
+class ManagerAssignmentHistory(db.Model):
+    __tablename__ = "manager_assignment_history"
+
+    assignment_id = db.Column(db.String(30), primary_key=True)
+
+    employee_id = db.Column(
+        db.String(20),
+        db.ForeignKey("employees.employee_id"),
+        nullable=False,
+    )
+
+    manager_id = db.Column(
+        db.String(20),
+        db.ForeignKey("managers.manager_id"),
+        nullable=False,
+    )
+
+    effective_from = db.Column(db.Date, nullable=False)
+    effective_to = db.Column(db.Date, nullable=True)
+    reason = db.Column(db.Text, nullable=True)
+
+    recorded_at = db.Column(
+        db.DateTime,
+        default=lambda: datetime.now(timezone.utc),
+        nullable=False,
+    )

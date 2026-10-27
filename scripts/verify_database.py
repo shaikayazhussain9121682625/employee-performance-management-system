@@ -1,5 +1,6 @@
 
 import sys
+import csv
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -21,7 +22,8 @@ EXPECTED_COUNTS = {
     "reviews": (models.Review, 3000),
     "feedback": (models.Feedback, 5000),
     "development_plans": (models.DevelopmentPlan, 3000),
-    "event_history": (models.EventHistory, 2),
+    # Audit history grows as legitimate changes are recorded.
+    "event_history": (models.EventHistory, None),
 }
 
 
@@ -34,14 +36,23 @@ def main():
 
         for name, (model, expected) in EXPECTED_COUNTS.items():
             actual = db.session.query(model).count()
-            status = "PASS" if actual == expected else "FAIL"
+
+            if expected is None:
+                # Preserve the minimum expected baseline history.
+                passed = actual >= 2
+                expected_text = "at least 2 baseline records"
+            else:
+                passed = actual == expected
+                expected_text = f"expected {expected}"
+
+            status = "PASS" if passed else "FAIL"
 
             print(
                 f"{status}: {name}: {actual} records "
-                f"(expected {expected})"
+                f"({expected_text})"
             )
 
-            if actual != expected:
+            if not passed:
                 failures += 1
 
         print("\nFOREIGN KEY CHECK")
@@ -71,15 +82,23 @@ def main():
             failures += 1
             print("FAIL: ground_truth.csv not found")
         else:
-            import csv
-
             with ground_truth_path.open(
                 "r", newline="", encoding="utf-8-sig"
             ) as file:
                 cases = list(csv.DictReader(file))
 
-            print(f"PASS: {len(cases)} ground-truth cases preserved")
-            print("Ground truth remains separate from application tables.")
+            if len(cases) != 5:
+                failures += 1
+                print(
+                    "FAIL: Expected 5 ground-truth cases, "
+                    f"found {len(cases)}"
+                )
+            else:
+                print("PASS: 5 ground-truth cases preserved")
+
+            print(
+                "Ground truth remains separate from application tables."
+            )
 
         print("\nFINAL RESULT")
         print("------------")

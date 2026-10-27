@@ -1,12 +1,13 @@
 
 from flask import Blueprint, jsonify
-from sqlalchemy import func
+from sqlalchemy import case, func
 
 from extensions import db
 from models import (
     Employee,
     Manager,
     Goal,
+    KeyResult,
     CheckIn,
     Review,
 )
@@ -34,9 +35,43 @@ def dashboard_summary():
         status="not_started"
     ).count()
 
-    average_progress = db.session.query(
-        func.avg(Goal.progress_percent)
-    ).scalar()
+    # Calculate each goal's progress from its key results.
+    # Key results with non-positive targets are excluded,
+    # matching the goal API's calculation rule.
+    progress_by_goal = (
+        db.session.query(
+            KeyResult.goal_id.label("goal_id"),
+            func.avg(
+                case(
+                    (
+                        KeyResult.target_value > 0,
+                        (
+                            KeyResult.current_value
+                            / KeyResult.target_value
+                        ) * 100,
+                    ),
+                    else_=None,
+                )
+            ).label("progress"),
+        )
+        .group_by(KeyResult.goal_id)
+        .subquery()
+    )
+
+    # Include goals without key results as 0 progress.
+    average_progress = (
+        db.session.query(
+            func.avg(
+                func.coalesce(progress_by_goal.c.progress, 0.0)
+            )
+        )
+        .select_from(Goal)
+        .outerjoin(
+            progress_by_goal,
+            Goal.goal_id == progress_by_goal.c.goal_id,
+        )
+        .scalar()
+    )
 
     department_counts = (
         db.session.query(

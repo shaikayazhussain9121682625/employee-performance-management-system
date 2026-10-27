@@ -19,3 +19,18 @@ frontend/dist/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Generated datasets, exports, and backups
+data/generated/
+data/generated_v3/
+data/generated_test_v3/
+data/generated_backup_before_v3/
+data/generated/**/*.csv
+data/generated/**/*.json
+data/generated/**/*.sql
+data/generated_v3/**/*.csv
+data/generated_v3/**/*.json
+data/generated_v3/**/*.sql
+data/generated_test_v3/**/*.csv
+data/generated_test_v3/**/*.json
+data/generated_test_v3/**/*.sql
