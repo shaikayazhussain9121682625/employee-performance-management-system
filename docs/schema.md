@@ -4,15 +4,16 @@
 
 This document describes the implemented SQLAlchemy database schema and the relationships between its entities. The application uses SQLite through Flask-SQLAlchemy. Generated data is synthetic.
 
-The database contains 11 tables: managers, employees, review_cycles, goals, key_results, check_ins, competencies, reviews, feedback, development_plans, and event_history.
+The database contains 12 application tables: managers, employees, review_cycles, goals, key_results, check_ins, competencies, reviews, feedback, development_plans, event_history, and manager_assignment_history.
 
-The generated CSV/JSON datasets and the SQL seed export are documented separately. The ground-truth labels are stored in `data/generated/ground_truth.csv` and `data/generated/ground_truth.json` and must not be used as application input features.
+The generated CSV/JSON datasets and the SQL seed export are documented separately. Ground-truth labels are stored separately in `data/generated/ground_truth.csv` and `data/generated/ground_truth.json` and must not be used as application input features.
 
 ## 2. Entities and Keys
 
 | Entity | Primary key | Foreign keys and relationships |
 |---|---|---|
 | Manager | `manager_id` | One manager may supervise many employees. |
+| ManagerAssignmentHistory | `assignment_id` | Required `employee_id` and `manager_id`; records manager assignments with effective dates and an optional reason. |
 | Employee | `employee_id` | Optional `manager_id` references `managers.manager_id`. |
 | ReviewCycle | `cycle_id` | One cycle may contain many goals. |
 | Goal | `goal_id` | Required `employee_id` and `cycle_id`; belongs to one employee and one cycle. |
@@ -29,6 +30,8 @@ All listed primary keys are declared by the SQLAlchemy models. Employee and mana
 ## 3. Relationship Cardinalities
 
 - Manager to Employee: one-to-many; an employee may have no assigned manager because `manager_id` is nullable.
+- Manager to ManagerAssignmentHistory: one-to-many; a manager may have multiple assignment-history records.
+- Employee to ManagerAssignmentHistory: one-to-many; an employee may have multiple assignment-history records over time.
 - Employee to Goal: one-to-many.
 - ReviewCycle to Goal: one-to-many.
 - Goal to KeyResult: one-to-many in the ORM relationship. Key results require a parent goal.
@@ -88,7 +91,21 @@ The `cycle_id` field has a foreign key to `review_cycles`. The combination of `e
 
 The current model does not enforce append-only history, immutable event records, version sequencing, or mandatory reasons for all state changes. These capabilities must not be claimed as fully implemented without additional code and tests.
 
-## 7. Feedback Attribution and Development Plan Approvals
+## 7. Manager Assignment History
+
+`ManagerAssignmentHistory` records employee-manager assignment history.
+
+- `assignment_id`: primary key.
+- `employee_id`: required foreign key referencing `employees.employee_id`.
+- `manager_id`: required foreign key referencing `managers.manager_id`.
+- `effective_from`: required date when the assignment begins.
+- `effective_to`: optional date when the assignment ends.
+- `reason`: optional explanation for the assignment change.
+- `recorded_at`: required timestamp recording when the history record was created.
+
+The model supports recording assignment history, but it does not by itself guarantee that assignment periods never overlap or that every manager change is recorded.
+
+## 8. Feedback Attribution and Development Plan Approvals
 
 Feedback currently stores `author_id` as a nullable string without a foreign-key constraint. This allows the deliberate missing-author test case, but it does not guarantee that a non-null author identifies a valid person. Reviewer type and self/manager/peer feedback type are not separate model fields.
 
@@ -96,7 +113,7 @@ Development plans currently store an employee, review, objective, action, target
 
 These are documented implementation limitations, not guarantees of existing functionality.
 
-## 8. Deliberate Edge Cases
+## 9. Deliberate Edge Cases
 
 The generated dataset includes five labelled test cases:
 
@@ -108,7 +125,7 @@ The generated dataset includes five labelled test cases:
 
 The corresponding ground-truth files document expected labels. Validation should report these deliberate cases separately from unexpected errors. The current validator reports findings; this does not mean all related business rules are enforced at write time.
 
-## 9. Data and Reproducibility
+## 10. Data and Reproducibility
 
 - Generator: `scripts/generate_data.py`
 - Validator: `scripts/validate_data.py`
@@ -120,7 +137,7 @@ The corresponding ground-truth files document expected labels. Validation should
 
 The configured seed is `20261022`. The generated source manifest records the generator version, seed, reference date, and synthetic-data provenance.
 
-## 10. Known Limitations and Future Improvements
+## 11. Known Limitations and Future Improvements
 
 - Add explicit database or service-level validation for status enums, date ordering, progress limits, and score ranges.
 - Enforce reviewer-to-employee relationship rules during review creation.
