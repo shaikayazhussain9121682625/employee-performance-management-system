@@ -4,26 +4,30 @@ from flask_cors import CORS
 
 from config import Config
 from extensions import db
-import models 
-from routes.employees import employees_bp 
-from routes.goals import goals_bp 
-from routes.dashboard import dashboard_bp 
+import models
+from routes.employees import employees_bp
+from routes.goals import goals_bp
+from routes.dashboard import dashboard_bp
 from routes.exceptions import exceptions_bp
+from routes.workflows import workflows_bp
+
 
 
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
 
+
     CORS(app)
     db.init_app(app)
-    app.register_blueprint(employees_bp, url_prefix="/api/employees") 
-    app.register_blueprint(goals_bp, url_prefix="/api/goals") 
+    app.register_blueprint(employees_bp, url_prefix="/api/employees")
+    app.register_blueprint(goals_bp, url_prefix="/api/goals")
+    app.register_blueprint(workflows_bp, url_prefix="/api")
     app.register_blueprint(
     dashboard_bp,
     url_prefix="/api/dashboard",
 )
-    
+
     app.register_blueprint(
     exceptions_bp,
     url_prefix="/api/exceptions",

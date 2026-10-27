@@ -1,0 +1,42 @@
+[
+  {
+    "case_id": "EDGE-001",
+    "entity_type": "goal",
+    "record_id": "GOAL-EMP-000001-00001",
+    "anomaly_type": "goal_owner_mismatch",
+    "expected_label": "invalid",
+    "description": "Goal ID belongs to EMP-000001, but employee_id was changed to EMP-000002."
+  },
+  {
+    "case_id": "EDGE-002",
+    "entity_type": "check_in",
+    "record_id": "CHK-000001",
+    "anomaly_type": "progress_out_of_range_without_rationale",
+    "expected_label": "invalid",
+    "description": "Progress exceeds 100 without a rationale."
+  },
+  {
+    "case_id": "EDGE-003",
+    "entity_type": "review",
+    "record_id": "REV-2026-000001",
+    "anomaly_type": "reviewer_relationship_invalid",
+    "expected_label": "invalid",
+    "description": "Reviewer is not the employee's assigned manager."
+  },
+  {
+    "case_id": "EDGE-004",
+    "entity_type": "event_history",
+    "record_id": "EVT-000002",
+    "anomaly_type": "closed_cycle_silent_edit",
+    "expected_label": "invalid",
+    "description": "A closed-cycle record was edited without a reason."
+  },
+  {
+    "case_id": "EDGE-005",
+    "entity_type": "feedback",
+    "record_id": "FDB-000001",
+    "anomaly_type": "feedback_untraceable",
+    "expected_label": "invalid",
+    "description": "Feedback has no author or evidence reference."
+  }
+]

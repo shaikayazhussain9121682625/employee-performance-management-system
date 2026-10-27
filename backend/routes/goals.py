@@ -5,7 +5,7 @@ import re
 from flask import Blueprint, jsonify, request
 
 from extensions import db
-from models import Goal, EventHistory
+from models import Goal, KeyResult, EventHistory
 
 goals_bp = Blueprint("goals", __name__)
 
@@ -263,6 +263,133 @@ def update_goal(goal_id):
         "message": "Goal updated successfully",
         "goal": serialize_goal(goal),
         "changes": changes,
+        "event": {
+            "event_id": event.event_id,
+            "event_type": event.event_type,
+            "reason": event.reason,
+        },
+    }), 200
+
+@goals_bp.put("/<string:goal_id>/key-results/<string:key_result_id>")
+def update_key_result(goal_id, key_result_id):
+    """Update a key result, recalculate goal progress, and audit the change."""
+    goal = db.session.get(Goal, goal_id)
+
+    if goal is None:
+        return jsonify({"error": "Goal not found"}), 404
+
+    key_result = db.session.get(KeyResult, key_result_id)
+
+    if key_result is None or key_result.goal_id != goal_id:
+        return jsonify({
+            "error": "Key result not found for this goal"
+        }), 404
+
+    payload = request.get_json(silent=True)
+
+    if not isinstance(payload, dict):
+        return jsonify({"error": "Request body must be a JSON object"}), 400
+
+    allowed_fields = {"current_value", "reason", "actor_id"}
+    unexpected = set(payload) - allowed_fields
+
+    if unexpected:
+        return jsonify({
+            "error": "Unsupported fields",
+            "fields": sorted(unexpected),
+        }), 400
+
+    value = payload.get("current_value")
+
+    if (
+        isinstance(value, bool)
+        or not isinstance(value, (int, float))
+        or not __import__("math").isfinite(value)
+        or value < 0
+    ):
+        return jsonify({
+            "error": "current_value must be a finite, non-negative number"
+        }), 400
+
+    reason = payload.get("reason")
+
+    if not isinstance(reason, str) or not reason.strip():
+        return jsonify({
+            "error": "A non-empty reason is required"
+        }), 400
+
+    actor_id = payload.get("actor_id")
+
+    if actor_id is not None and (
+        not isinstance(actor_id, str) or not actor_id.strip()
+    ):
+        return jsonify({
+            "error": "actor_id must be a non-empty string"
+        }), 400
+
+    cycle_status = (goal.cycle.status or "").strip().lower()
+
+    if cycle_status != "active":
+        return jsonify({
+            "error": "Key results can only be updated in an active review cycle",
+            "cycle_status": goal.cycle.status,
+        }), 409
+
+    if key_result.target_value <= 0:
+        return jsonify({
+            "error": "Key result target_value must be greater than zero"
+        }), 409
+
+    if value > key_result.target_value and not reason.strip():
+        return jsonify({
+            "error": "A rationale is required when progress exceeds the target"
+        }), 400
+
+    old_value = key_result.current_value
+    new_value = float(value)
+
+    if old_value == new_value:
+        return jsonify({"error": "No change to current_value"}), 400
+
+    # Store the before-and-after values in the audit reason.
+    audit_reason = (
+        f"{reason.strip()} | current_value: {old_value} -> {new_value}"
+    )
+
+    event = EventHistory(
+        event_id=next_event_id(),
+        cycle_id=goal.cycle_id,
+        entity_type="key_result",
+        record_id=key_result.key_result_id,
+        event_type="updated",
+        actor_id=actor_id.strip() if actor_id else None,
+        event_time=datetime.now(timezone.utc),
+        reason=audit_reason,
+    )
+
+    try:
+        key_result.current_value = new_value
+        db.session.add(event)
+        db.session.flush()
+
+        progress = calculate_goal_progress(goal)
+
+        db.session.commit()
+
+    except Exception:
+        db.session.rollback()
+        raise
+
+    return jsonify({
+        "message": "Key result updated successfully",
+        "key_result": {
+            "key_result_id": key_result.key_result_id,
+            "goal_id": goal.goal_id,
+            "old_current_value": old_value,
+            "current_value": key_result.current_value,
+            "target_value": key_result.target_value,
+        },
+        "goal_progress_percent": progress,
         "event": {
             "event_id": event.event_id,
             "event_type": event.event_type,

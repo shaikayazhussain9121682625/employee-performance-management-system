@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import "./App.css";
+import WorkflowPanel from "./WorkflowPanel";
 
 const API = "http://127.0.0.1:5000";
 
@@ -211,6 +212,7 @@ function App() {
           ))}
         </article>
       </section>
+      <WorkflowPanel />
 
       <section className="panel exceptions-panel">
         <div className="section-heading">

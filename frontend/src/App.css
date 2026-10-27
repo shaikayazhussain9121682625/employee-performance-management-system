@@ -530,3 +530,1129 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+.workflow-panel {
+  margin: 24px 0;
+}
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.workflow-form {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.workflow-form h3,
+.workflow-list h3 {
+  margin: 0 0 8px;
+}
+
+.workflow-form label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.workflow-form input,
+.workflow-form select,
+.workflow-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font: inherit;
+  font-weight: 400;
+}
+
+.workflow-form textarea {
+  min-height: 76px;
+  resize: vertical;
+}
+
+.workflow-form button,
+.workflow-list-item button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 7px;
+  background: #1d4ed8;
+  color: white;
+  cursor: pointer;
+}
+
+.workflow-form button:disabled,
+.workflow-list-item button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.workflow-success {
+  padding: 12px;
+  border-radius: 8px;
+  background: #ecfdf5;
+  color: #166534;
+}
+
+.workflow-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.workflow-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+}
+
+.workflow-list-item p {
+  margin: 6px 0 0;
+  color: #64748b;
+}
+
+@media (max-width: 760px) {
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-list-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Professional workflow dialogs and notifications */
+.workflow-notice {
+  position: sticky;
+  top: 12px;
+  z-index: 50;
+  margin: 16px 0;
+  padding: 16px 20px;
+  border: 1px solid #a7f3d0;
+  border-radius: 12px;
+  background: #ecfdf5;
+  color: #065f46;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.workflow-notice.error-notice {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.workflow-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.workflow-modal {
+  width: 100%;
+  max-width: 480px;
+  padding: 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  background: #fff;
+  color: #172033;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.25);
+}
+
+.workflow-modal h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.workflow-modal p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.workflow-modal label {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0;
+  font-weight: 600;
+}
+
+.workflow-modal input,
+.workflow-modal select,
+.workflow-modal textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background: #fff;
+  color: #172033;
+  font: inherit;
+}
+
+.workflow-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.workflow-modal-actions button {
+  padding: 11px 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.workflow-modal-actions .primary-action {
+  border-color: #1d4ed8;
+  background: #1d4ed8;
+  color: #fff;
+}
+
+.employee-picker {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #f8fafc;
+}
+
+.employee-picker input,
+.employee-picker select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.employee-profile {
+  padding: 16px;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  background: #eff6ff;
+}
+
+.employee-profile strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #1e3a8a;
+}
+
+@media (max-width: 600px) {
+  .workflow-modal {
+    padding: 20px;
+  }
+
+  .workflow-modal-actions {
+    flex-direction: column;
+  }
+
+  .workflow-modal-actions button {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   PROFESSIONAL EMPLOYEE MANAGEMENT UI
+   Responsive layout, forms, cards and modals
+   ========================================== */
+
+:root {
+  --ui-primary: #2563eb;
+  --ui-primary-hover: #1d4ed8;
+  --ui-text: #172033;
+  --ui-muted: #64748b;
+  --ui-border: #e2e8f0;
+  --ui-background: #f5f7fb;
+  --ui-surface: #ffffff;
+  --ui-radius: 14px;
+  --ui-shadow: 0 4px 18px rgba(15, 23, 42, 0.045);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--ui-background);
+  color: var(--ui-text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  transition: background-color 0.18s ease, border-color 0.18s ease,
+    box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.18);
+  outline-offset: 2px;
+}
+
+/* Main workflow area */
+
+.workflow-section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 28px;
+  color: var(--ui-text);
+}
+
+.workflow-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.workflow-heading h2,
+.workflow-section > h2 {
+  margin: 0 0 6px;
+  font-size: clamp(23px, 2.5vw, 30px);
+  font-weight: 750;
+  line-height: 1.3;
+  letter-spacing: -0.7px;
+  color: #111827;
+}
+
+.workflow-heading p {
+  margin: 0;
+  color: var(--ui-muted);
+  font-size: 14px;
+}
+
+/* Employee search */
+
+.employee-picker {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px 24px;
+  margin: 0 0 28px;
+  padding: 24px;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius);
+  background: var(--ui-surface);
+  box-shadow: var(--ui-shadow);
+}
+
+.employee-picker h3 {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.employee-picker label {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.employee-picker input,
+.employee-picker select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 13px;
+  border: 1px solid #d5dce7;
+  border-radius: 9px;
+  background: #fff;
+  color: var(--ui-text);
+}
+
+.employee-profile {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 24px;
+  padding: 20px;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  background: #f8fbff;
+  overflow-wrap: anywhere;
+}
+
+.employee-profile strong {
+  grid-column: 1 / -1;
+  margin: 0 0 4px;
+  color: #1d4ed8;
+  font-size: 18px;
+}
+
+/* Workflow form grid */
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+}
+
+.workflow-card {
+  min-width: 0;
+  padding: 26px;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius);
+  background: var(--ui-surface);
+  box-shadow: var(--ui-shadow);
+  color: var(--ui-text);
+}
+
+.workflow-card h3 {
+  margin: 0 0 22px;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.workflow-card h4 {
+  margin: 24px 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 15px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.workflow-card label {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  min-width: 0;
+  margin: 0 0 20px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.workflow-card input:not([type="checkbox"]),
+.workflow-card select,
+.workflow-card textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 11px 13px;
+  border: 1px solid #d5dce7;
+  border-radius: 9px;
+  background: #fff;
+  color: #172033;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  box-shadow: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.workflow-card textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.workflow-card input::placeholder,
+.workflow-card textarea::placeholder,
+.employee-picker input::placeholder {
+  color: #94a3b8;
+}
+
+.workflow-card input:focus,
+.workflow-card select:focus,
+.workflow-card textarea:focus,
+.employee-picker input:focus,
+.employee-picker select:focus {
+  outline: none;
+  border-color: var(--ui-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.workflow-card button,
+.workflow-section button {
+  min-height: 40px;
+  font-weight: 600;
+}
+
+.workflow-card button:not(.primary-action):not([aria-label]),
+.workflow-section button:not(.primary-action):not([aria-label]) {
+  max-width: 100%;
+}
+
+.workflow-card > button[type="submit"],
+.workflow-grid button[type="submit"] {
+  width: 100%;
+  min-height: 46px;
+  margin-top: 2px;
+  padding: 12px 18px;
+  border: 1px solid var(--ui-primary);
+  border-radius: 9px;
+  background: var(--ui-primary);
+  color: #fff;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.workflow-card > button[type="submit"]:hover,
+.workflow-grid button[type="submit"]:hover {
+  border-color: var(--ui-primary-hover);
+  background: var(--ui-primary-hover);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.16);
+}
+
+.workflow-card button:disabled,
+.workflow-section button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Recent records */
+
+.workflow-record {
+  margin: 0 0 14px;
+  padding: 18px;
+  border: 1px solid #e6eaf0;
+  border-radius: 11px;
+  background: #fff;
+  overflow-wrap: anywhere;
+}
+
+.workflow-record strong {
+  color: #1e40af;
+  font-size: 14px;
+}
+
+.workflow-record p {
+  margin: 8px 0;
+  color: var(--ui-muted);
+}
+
+.workflow-record button {
+  margin-top: 8px;
+  padding: 9px 14px;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  cursor: pointer;
+}
+
+.workflow-record button:hover {
+  background: #dbeafe;
+}
+
+/* Sticky success and error notifications */
+
+.workflow-notice {
+  position: sticky;
+  top: 12px;
+  z-index: 50;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0 0 24px;
+  padding: 16px 18px;
+  border: 1px solid #a7f3d0;
+  border-radius: 11px;
+  background: #ecfdf5;
+  color: #065f46;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.09);
+  overflow-wrap: anywhere;
+}
+
+.workflow-notice.error-notice {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+/* Modal dialogs */
+
+.workflow-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.workflow-modal {
+  width: 100%;
+  max-width: 480px;
+  max-height: calc(100dvh - 40px);
+  margin: auto;
+  padding: 28px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #fff;
+  color: var(--ui-text);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.24);
+}
+
+.workflow-modal h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 750;
+  letter-spacing: -0.4px;
+}
+
+.workflow-modal p {
+  margin: 0 0 20px;
+  color: var(--ui-muted);
+  line-height: 1.6;
+}
+
+.workflow-modal label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 18px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.workflow-modal input,
+.workflow-modal select,
+.workflow-modal textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 11px 13px;
+  border: 1px solid #d5dce7;
+  border-radius: 9px;
+  background: #fff;
+  color: #172033;
+}
+
+.workflow-modal textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.workflow-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #edf0f5;
+}
+
+.workflow-modal-actions button {
+  min-height: 42px;
+  padding: 10px 18px;
+  border: 1px solid #d5dce7;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.workflow-modal-actions button:first-child {
+  background: #fff;
+  color: #334155;
+}
+
+.workflow-modal-actions button:first-child:hover {
+  background: #f8fafc;
+}
+
+.workflow-modal-actions button.primary-action {
+  border-color: var(--ui-primary);
+  background: var(--ui-primary);
+  color: #fff;
+}
+
+.workflow-modal-actions button.primary-action:hover {
+  background: var(--ui-primary-hover);
+}
+
+/* Shared dashboard/table improvements */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th {
+  padding: 13px 16px;
+  background: #f8fafc;
+  color: #475569;
+  text-align: left;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #edf0f5;
+  color: #334155;
+  vertical-align: middle;
+}
+
+tbody tr:hover {
+  background: #f8fbff;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .workflow-section {
+    padding: 22px;
+  }
+
+  .workflow-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .workflow-card {
+    padding: 22px;
+  }
+
+  .employee-picker {
+    padding: 22px;
+    gap: 18px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .workflow-section {
+    padding: 14px;
+  }
+
+  .workflow-heading {
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .workflow-heading h2,
+  .workflow-section > h2 {
+    font-size: 23px;
+  }
+
+  .workflow-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .workflow-card {
+    padding: 19px;
+    border-radius: 12px;
+  }
+
+  .workflow-card h3 {
+    margin-bottom: 18px;
+    font-size: 17px;
+  }
+
+  .workflow-card label {
+    margin-bottom: 17px;
+  }
+
+  .employee-picker {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding: 18px;
+    margin-bottom: 18px;
+  }
+
+  .employee-picker h3,
+  .employee-profile {
+    grid-column: auto;
+  }
+
+  .employee-profile {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 16px;
+    gap: 8px;
+  }
+
+  .employee-profile strong {
+    grid-column: auto;
+  }
+
+  .workflow-modal-backdrop {
+    align-items: flex-end;
+    padding: 10px;
+  }
+
+  .workflow-modal {
+    max-width: 100%;
+    max-height: calc(100dvh - 20px);
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+  .workflow-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .workflow-modal-actions button {
+    width: 100%;
+  }
+
+  table {
+    min-width: 650px;
+  }
+}
+
+/* FIX: Apply the missing performance-record styles */
+
+.records-section {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1440px !important;
+  margin: 32px auto !important;
+  padding: 0 24px !important;
+  color: #172033 !important;
+}
+
+.records-heading {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  margin-bottom: 22px !important;
+}
+
+.records-heading h2 {
+  margin: 0 !important;
+  font-size: 26px !important;
+  font-weight: 750 !important;
+  color: #111827 !important;
+}
+
+.records-heading p {
+  margin: 6px 0 0 !important;
+  color: #64748b !important;
+  font-size: 14px !important;
+}
+
+.records-columns {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  align-items: start !important;
+  gap: 24px !important;
+}
+
+.records-panel {
+  display: block !important;
+  min-width: 0 !important;
+  padding: 24px !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05) !important;
+}
+
+.records-panel-heading {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin: 0 0 20px !important;
+  padding: 0 0 18px !important;
+  border-bottom: 1px solid #edf0f5 !important;
+}
+
+.records-panel-heading h3 {
+  margin: 0 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #172033 !important;
+}
+
+.records-panel-heading p {
+  margin: 5px 0 0 !important;
+  font-size: 13px !important;
+  color: #64748b !important;
+}
+
+.records-count {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 34px !important;
+  height: 34px !important;
+  padding: 0 10px !important;
+  border-radius: 10px !important;
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+.records-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 14px !important;
+}
+
+.record-card {
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  padding: 20px !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+  overflow-wrap: anywhere !important;
+}
+
+.record-card:hover {
+  border-color: #bfdbfe !important;
+  box-shadow: 0 5px 16px rgba(15, 23, 42, 0.05) !important;
+}
+
+.record-topline {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  margin: 0 0 16px !important;
+}
+
+.record-type {
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.8px !important;
+  color: #64748b !important;
+}
+
+.status-badge {
+  display: inline-flex !important;
+  width: fit-content !important;
+  padding: 5px 10px !important;
+  border: 1px solid #bfdbfe !important;
+  border-radius: 20px !important;
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  text-transform: capitalize !important;
+}
+
+.status-draft,
+.status-pending {
+  border-color: #fde68a !important;
+  background: #fffbeb !important;
+  color: #92400e !important;
+}
+
+.status-completed,
+.status-approved {
+  border-color: #a7f3d0 !important;
+  background: #ecfdf5 !important;
+  color: #047857 !important;
+}
+
+.status-rejected {
+  border-color: #fecaca !important;
+  background: #fef2f2 !important;
+  color: #b91c1c !important;
+}
+
+.record-card h4 {
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  font-size: 16px !important;
+  font-weight: 750 !important;
+  color: #172033 !important;
+}
+
+.record-description,
+.record-objective {
+  margin: 0 0 14px !important;
+  color: #64748b !important;
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+}
+
+.record-score,
+.record-meta {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin: 12px 0 !important;
+  padding: 12px !important;
+  border-radius: 9px !important;
+  background: #f8fafc !important;
+}
+
+.record-score span,
+.record-meta span {
+  color: #64748b !important;
+  font-size: 12px !important;
+}
+
+.record-score strong,
+.record-meta strong {
+  color: #172033 !important;
+  font-size: 14px !important;
+}
+
+.record-card button.record-action {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  width: 100% !important;
+  min-height: 40px !important;
+  margin: 12px 0 0 !important;
+  padding: 10px 13px !important;
+  border: 1px solid #dbeafe !important;
+  border-radius: 8px !important;
+  background: #f8fbff !important;
+  color: #1d4ed8 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+}
+
+.record-card button.record-action:hover {
+  border-color: #2563eb !important;
+  background: #eff6ff !important;
+}
+
+.records-empty {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 170px !important;
+  padding: 24px !important;
+  border: 1px dashed #cbd5e1 !important;
+  border-radius: 12px !important;
+  background: #f8fafc !important;
+  text-align: center !important;
+}
+
+.records-empty strong {
+  color: #334155 !important;
+  font-size: 14px !important;
+}
+
+.records-empty p {
+  margin: 6px 0 0 !important;
+  color: #64748b !important;
+  font-size: 13px !important;
+}
+
+.records-employee {
+  padding: 8px 13px !important;
+  border: 1px solid #dbeafe !important;
+  border-radius: 20px !important;
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+  font-weight: 600 !important;
+}
+
+@media (min-width: 1200px) {
+  .records-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .records-section {
+    padding: 0 18px !important;
+  }
+
+  .records-columns {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .records-section {
+    padding: 0 12px !important;
+    margin: 24px auto !important;
+  }
+
+  .records-heading h2 {
+    font-size: 22px !important;
+  }
+
+  .records-panel {
+    padding: 16px !important;
+  }
+
+  .records-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .record-card {
+    padding: 16px !important;
+  }
+}

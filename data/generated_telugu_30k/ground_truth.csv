@@ -1,0 +1,6 @@
+case_id,entity_type,record_id,anomaly_type,expected_label,description
+EDGE-001,goal,GOAL-EMP-000001-00001,goal_owner_mismatch,invalid,"Goal ID belongs to EMP-000001, but employee_id was changed to EMP-000002."
+EDGE-002,check_in,CHK-000001,progress_out_of_range_without_rationale,invalid,Progress exceeds 100 without a rationale.
+EDGE-003,review,REV-2026-000001,reviewer_relationship_invalid,invalid,Reviewer is not the employee's assigned manager.
+EDGE-004,event_history,EVT-000002,closed_cycle_silent_edit,invalid,A closed-cycle record was edited without a reason.
+EDGE-005,feedback,FDB-000001,feedback_untraceable,invalid,Feedback has no author or evidence reference.

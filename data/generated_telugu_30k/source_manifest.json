@@ -1,0 +1,33 @@
+{
+  "seed": 20261022,
+  "reference_date": "2026-10-26",
+  "data_type": "synthetic",
+  "generator_version": "3.0",
+  "counts": {
+    "managers": 500,
+    "employees": 30000,
+    "review_cycles": 2,
+    "goals": 10000,
+    "key_results": 20000,
+    "check_ins": 20000,
+    "competencies": 8,
+    "reviews": 30000,
+    "feedback": 5000,
+    "development_plans": 30000,
+    "event_history": 2,
+    "manager_assignment_history": 30300,
+    "ground_truth_cases": 5
+  },
+  "notes": [
+    "All records are synthetic.",
+    "Ground truth labels deliberately injected edge cases.",
+    "Ground truth is separate from application input tables.",
+    "Goal progress is derived from key-result current values.",
+    "Dates are generated within their assigned review-cycle windows.",
+    "Manager assignments include effective-dated transfer history.",
+    "Feedback includes self, manager, and peer categories.",
+    "Conflicting feedback is retained as separate source records.",
+    "Development plans include explicit approval states.",
+    "Fixed seed makes generation reproducible for the same arguments."
+  ]
+}

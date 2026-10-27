@@ -48,6 +48,71 @@ def date_in_cycle(rng, cycle):
     return random_date(rng, start, end).isoformat()
 
 
+
+TELUGU_FIRST_NAMES = """
+Aarav Vivaan Aditya Arjun Sai Kiran Pavan Naveen
+Praneeth Rohit Rahul Rohan Karthik Venkatesh Harsha
+Teja Charan Akhil Abhinav Sandeep Praveen Suresh Mahesh
+Rajesh Ramesh Anil Vijay Krishna Tarun Varun Nikhil
+Srinivas Srikar Sai Teja Lokesh Manoj Santosh Dinesh
+Bhargav Gautham Shashank Ashwin Akshay Ajay Surya
+Madhav Yash Deepak Chaitanya Nithin Uday Varun
+Aadhya Sravani Harika Kavya Keerthi Lahari
+Mounika Divya Anusha Swathi Sindhu Priya Sushma
+Lakshmi Bhavya Navya Niharika Sneha Pooja
+Sowmya Sirisha Ramya Alekhya Manasa Tejaswini
+Deepika Padma Vaishnavi Meghana Anjali Aparna
+Sahithi Pranavi Siri Hima Chandana Amrutha
+""".split()
+
+TELUGU_MIDDLE_NAMES = """
+Kumar Reddy Sai Teja Kiran Prasad Rao
+Chandra Krishna Vamsi Charan Anand Varma
+Mohan Kumar Raj Sekhar Babu Narayana
+Lakshmi Devi Sri Priya Kumari
+""".split()
+
+TELUGU_SURNAMES = """
+Reddy Rao Goud Naidu Chowdary Varma
+Yadav Sharma Gupta Nallamothu Kommineni
+Daggubati Akkineni Konidela Allu Ghattamaneni
+Kandula Kanneganti Velagapudi Gummadi
+Pothineni Uppalapati Manchu Nandamuri
+Kota Atluri Madduri Challa Koppula
+Bollam Konda Meka Nakka Jonnalagadda
+Pakala Ganta Vemuri Pamulaparthi Kandukuri
+Bandi Burra Gali Kilaru Tummala
+Chintala Devarakonda Eedara Gaddam Gurram
+Irrinki Jasti Kaki Kammari Kancherla
+Kapu Katta Kolli Lankapalli Maddirala
+Mamidala Muppala Nadella Nalluri Paladugu
+Paturi Penmetsa Peruri Pinnamaneni Rapolu
+Sagi Sama Sirigiri Talluri Tangella
+Thota Tiyyagura Vadlamudi Vangala Vuyyuru
+Yelamanchili Yerramilli Zandrapalli Adusumilli
+Bandaru Chaganti Chavali Dasari Gollapalli
+Gorantla Inampudi Kakarla Kalluri Kothapalli
+Malladi Mudunuri Namburi Pasupuleti Rachakonda
+Sunkara Tenali Vavilala Yarlagadda
+""".split()
+
+
+def telugu_name(index):
+    first_count = len(TELUGU_FIRST_NAMES)
+    middle_count = len(TELUGU_MIDDLE_NAMES)
+    surname_count = len(TELUGU_SURNAMES)
+
+    first = TELUGU_FIRST_NAMES[index % first_count]
+    middle = TELUGU_MIDDLE_NAMES[
+        (index // first_count) % middle_count
+    ]
+    surname = TELUGU_SURNAMES[
+        (index // (first_count * middle_count)) % surname_count
+    ]
+
+    return f"{first} {middle} {surname}"
+
+
 def generate(args):
     global DATA_DIR
     DATA_DIR = args.output_dir.resolve()
@@ -83,7 +148,7 @@ def generate(args):
     for i in range(1, args.managers + 1):
         managers.append({
             "manager_id": f"MGR-{i:06d}",
-            "full_name": fake.name(),
+            "full_name": telugu_name(i - 1),
             "email": f"manager{i:06d}@example.com",
             "department": departments[(i - 1) % len(departments)],
         })
@@ -102,7 +167,7 @@ def generate(args):
 
         employees.append({
             "employee_id": f"EMP-{i:06d}",
-            "full_name": fake.name(),
+            "full_name": telugu_name(i - 1),
             "email": f"employee{i:06d}@example.com",
             "department": departments[(i - 1) % len(departments)],
             "job_title": job_titles[(i - 1) % len(job_titles)],
