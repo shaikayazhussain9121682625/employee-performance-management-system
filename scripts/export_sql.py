@@ -1,19 +1,43 @@
-﻿import sqlite3
+﻿import argparse
+import sqlite3
 from pathlib import Path
 
-root = Path(__file__).resolve().parent.parent
-db_path = root / "data" / "employee_performance.db"
-out_path = root / "data" / "generated" / "employee_performance_seed.sql"
+ROOT = Path(__file__).resolve().parent.parent
 
-if not db_path.exists():
-    raise SystemExit(f"Database not found: {db_path}")
+def main():
+    parser = argparse.ArgumentParser(
+        description="Export a SQLite database to a SQL dump."
+    )
+    parser.add_argument(
+        "--database",
+        default=str(ROOT / "data" / "employee_performance.db"),
+        help="SQLite database to export"
+    )
+    parser.add_argument(
+        "--output",
+        default=str(ROOT / "data" / "generated" / "employee_performance_seed.sql"),
+        help="Destination SQL file"
+    )
+    args = parser.parse_args()
 
-out_path.parent.mkdir(parents=True, exist_ok=True)
+    db_path = Path(args.database).resolve()
+    out_path = Path(args.output).resolve()
 
-with sqlite3.connect(db_path) as connection:
-    with out_path.open("w", encoding="utf-8", newline="\n") as output:
-        for line in connection.iterdump():
-            output.write(line + "\n")
+    if not db_path.is_file():
+        raise SystemExit(f"Database not found: {db_path}")
+    if db_path == out_path:
+        raise SystemExit("Output must not overwrite the database.")
 
-print("SQL export created:", out_path)
-print("File size:", out_path.stat().st_size, "bytes")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with sqlite3.connect(str(db_path)) as connection:
+        with out_path.open("w", encoding="utf-8", newline="\n") as output:
+            for line in connection.iterdump():
+                output.write(line + "\n")
+
+    print("SQL export created:", out_path)
+    print("Source database:", db_path)
+    print("File size:", out_path.stat().st_size, "bytes")
+
+if __name__ == "__main__":
+    main()
