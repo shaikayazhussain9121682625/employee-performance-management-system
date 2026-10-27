@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import "./App.css";
 
 const API = "http://127.0.0.1:5000";
@@ -280,9 +280,10 @@ function WorkflowPanel() {
           }
         );
 
-        setActiveModal(null);
         await loadWorkflowData();
         showMessage(`Review ${item.review_id} updated successfully.`);
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+        setActiveModal(null);
       } else {
         const { item } = activeModal;
 
@@ -298,9 +299,10 @@ function WorkflowPanel() {
           }
         );
 
-        setActiveModal(null);
         await loadWorkflowData();
         showMessage(`Development plan ${item.plan_id} updated successfully.`);
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+        setActiveModal(null);
       }
     } catch (err) {
       showError(err.message);
@@ -332,7 +334,7 @@ function WorkflowPanel() {
           role={error ? "alert" : "status"}
           aria-live="polite"
         >
-          <span>{error ? "âš ï¸" : "âœ“"}</span>
+          <span>{error ? "Ã¢Å¡Â Ã¯Â¸Â" : "Ã¢Å“â€œ"}</span>
           <div>{error || message}</div>
           <button
             type="button"
@@ -349,7 +351,7 @@ function WorkflowPanel() {
               fontSize: "18px",
             }}
           >
-            Ã—
+            Ãƒâ€”
           </button>
         </div>
       )}
@@ -380,7 +382,7 @@ function WorkflowPanel() {
                 key={employee.employee_id}
                 value={employee.employee_id}
               >
-                {employee.full_name} â€” {employee.employee_id}
+                {employee.full_name} Ã¢â‚¬â€ {employee.employee_id}
               </option>
             ))}
           </select>
@@ -828,10 +830,10 @@ function WorkflowPanel() {
                       <p className="record-description">Employee: {item.employee_id}</p>
                       <div className="record-score">
                         <span>Review score</span>
-                        <strong>{item.score ?? "—"}</strong>
+                        <strong>{item.score ?? "â€”"}</strong>
                       </div>
                       <button type="button" className="record-action" onClick={() => openReviewModal(item)}>
-                        Update status <span aria-hidden="true">→</span>
+                        Update status <span aria-hidden="true">â†’</span>
                       </button>
                     </article>
                   ))}
@@ -874,7 +876,7 @@ function WorkflowPanel() {
                           </div>
                         )}
                         <button type="button" className="record-action" onClick={() => openPlanModal(item)}>
-                          Make decision <span aria-hidden="true">→</span>
+                          Make decision <span aria-hidden="true">â†’</span>
                         </button>
                       </article>
                     );
@@ -922,10 +924,10 @@ function WorkflowPanel() {
                       <p className="record-description">Employee: {item.employee_id}</p>
                       <div className="record-score">
                         <span>Review score</span>
-                        <strong>{item.score ?? "—"}</strong>
+                        <strong>{item.score ?? "â€”"}</strong>
                       </div>
                       <button type="button" className="record-action" onClick={() => openReviewModal(item)}>
-                        Update status <span aria-hidden="true">→</span>
+                        Update status <span aria-hidden="true">â†’</span>
                       </button>
                     </article>
                   ))}
@@ -963,7 +965,7 @@ function WorkflowPanel() {
                         <p className="record-description">Employee: {item.employee_id}</p>
                         <p className="record-objective">{item.objective || "Development objective"}</p>
                         <button type="button" className="record-action" onClick={() => openPlanModal(item)}>
-                          Make decision <span aria-hidden="true">→</span>
+                          Make decision <span aria-hidden="true">â†’</span>
                         </button>
                       </article>
                     );

@@ -1,4 +1,4 @@
-from datetime import date, datetime, timezone
+﻿from datetime import date, datetime, timezone
 import re
 import math
 
@@ -92,7 +92,7 @@ def list_check_ins():
     page = request.args.get("page", 1, type=int)
     per_page = request.args.get("per_page", 20, type=int)
     if page < 1 or not 1 <= per_page <= 100:
-        return jsonify({"error": "page must be positive and per_page must be 1–100"}), 400
+        return jsonify({"error": "page must be positive and per_page must be 1â€“100"}), 400
 
     result = query.order_by(CheckIn.check_in_date.desc()).paginate(
         page=page, per_page=per_page, error_out=False
@@ -140,7 +140,7 @@ def create_check_in():
     rationale = payload.get("rationale")
     if progress < 0 or progress > 100:
         if not isinstance(rationale, str) or not rationale.strip():
-            return jsonify({"error": "A rationale is required when progress is outside 0–100"}), 400
+            return jsonify({"error": "A rationale is required when progress is outside 0â€“100"}), 400
 
     try:
         check_in_date = parse_date(payload.get("check_in_date", date.today().isoformat()), "check_in_date")
@@ -199,7 +199,7 @@ def list_feedback():
 
     if page < 1 or not 1 <= per_page <= 100:
         return jsonify({
-            "error": "page must be positive and per_page must be 1–100"
+            "error": "page must be positive and per_page must be 1â€“100"
         }), 400
 
     result = query.order_by(Feedback.feedback_date.desc()).paginate(
@@ -329,7 +329,7 @@ def list_reviews():
     page = request.args.get("page", 1, type=int)
     per_page = request.args.get("per_page", 20, type=int)
     if page < 1 or not 1 <= per_page <= 100:
-        return jsonify({"error": "page must be positive and per_page must be 1–100"}), 400
+        return jsonify({"error": "page must be positive and per_page must be 1â€“100"}), 400
 
     result = query.order_by(Review.review_date.desc()).paginate(
         page=page, per_page=per_page, error_out=False
@@ -470,7 +470,7 @@ def list_development_plans():
     page = request.args.get("page", 1, type=int)
     per_page = request.args.get("per_page", 20, type=int)
     if page < 1 or not 1 <= per_page <= 100:
-        return jsonify({"error": "page must be positive and per_page must be 1–100"}), 400
+        return jsonify({"error": "page must be positive and per_page must be 1â€“100"}), 400
 
     result = query.order_by(DevelopmentPlan.target_date).paginate(
         page=page, per_page=per_page, error_out=False
@@ -478,6 +478,7 @@ def list_development_plans():
     return jsonify({
         "items": [{
             "development_plan_id": item.development_plan_id,
+            "plan_id": item.development_plan_id,
             "employee_id": item.employee_id,
             "review_id": item.review_id,
             "objective": item.objective,
@@ -556,6 +557,7 @@ def create_development_plan():
     return jsonify({
         "message": "Development plan created",
         "development_plan_id": item.development_plan_id,
+            "plan_id": item.development_plan_id,
         "approval_status": item.approval_status,
     }), 201
 
@@ -617,7 +619,9 @@ def decide_development_plan(plan_id):
     return jsonify({
         "message": f"Development plan {decision}",
         "development_plan_id": item.development_plan_id,
+            "plan_id": item.development_plan_id,
         "approval_status": item.approval_status,
         "approved_by": item.approved_by,
         "approved_at": item.approved_at.isoformat() if item.approved_at else None,
     })
+
