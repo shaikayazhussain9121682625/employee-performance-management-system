@@ -1,0 +1,3002 @@
+[
+  {
+    "manager_id": "MGR-000001",
+    "full_name": "Lauren Nash",
+    "email": "manager000001@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000002",
+    "full_name": "Rodney Hall",
+    "email": "manager000002@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000003",
+    "full_name": "Roger Anderson",
+    "email": "manager000003@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000004",
+    "full_name": "Eric Miles",
+    "email": "manager000004@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000005",
+    "full_name": "Ashley Lee",
+    "email": "manager000005@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000006",
+    "full_name": "Brian Garza",
+    "email": "manager000006@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000007",
+    "full_name": "Brian Thomas",
+    "email": "manager000007@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000008",
+    "full_name": "Anthony Bass",
+    "email": "manager000008@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000009",
+    "full_name": "Jim Sexton",
+    "email": "manager000009@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000010",
+    "full_name": "Kayla Palmer",
+    "email": "manager000010@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000011",
+    "full_name": "Christopher Gilbert",
+    "email": "manager000011@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000012",
+    "full_name": "Brandon Bryant",
+    "email": "manager000012@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000013",
+    "full_name": "Amber Nash",
+    "email": "manager000013@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000014",
+    "full_name": "Christine Brown",
+    "email": "manager000014@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000015",
+    "full_name": "Brendan Wagner",
+    "email": "manager000015@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000016",
+    "full_name": "Benjamin Robinson",
+    "email": "manager000016@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000017",
+    "full_name": "Karen Jones DDS",
+    "email": "manager000017@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000018",
+    "full_name": "Holly Wise",
+    "email": "manager000018@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000019",
+    "full_name": "Wendy Smith",
+    "email": "manager000019@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000020",
+    "full_name": "Mr. Allen Fletcher",
+    "email": "manager000020@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000021",
+    "full_name": "Jose Rodgers",
+    "email": "manager000021@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000022",
+    "full_name": "Monique Vincent",
+    "email": "manager000022@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000023",
+    "full_name": "Ryan Wilson",
+    "email": "manager000023@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000024",
+    "full_name": "Lauren Williams",
+    "email": "manager000024@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000025",
+    "full_name": "Jonathan Smith",
+    "email": "manager000025@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000026",
+    "full_name": "Jessica Stevens",
+    "email": "manager000026@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000027",
+    "full_name": "Curtis Odom",
+    "email": "manager000027@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000028",
+    "full_name": "Lindsey Vance",
+    "email": "manager000028@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000029",
+    "full_name": "Molly Frost",
+    "email": "manager000029@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000030",
+    "full_name": "Matthew Scott",
+    "email": "manager000030@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000031",
+    "full_name": "Jennifer Robles",
+    "email": "manager000031@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000032",
+    "full_name": "Heather Navarro",
+    "email": "manager000032@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000033",
+    "full_name": "Cassandra Mason",
+    "email": "manager000033@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000034",
+    "full_name": "Edgar Hernandez",
+    "email": "manager000034@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000035",
+    "full_name": "Amanda Bowman DVM",
+    "email": "manager000035@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000036",
+    "full_name": "Melissa Adams",
+    "email": "manager000036@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000037",
+    "full_name": "Olivia Dixon DVM",
+    "email": "manager000037@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000038",
+    "full_name": "Paul Gould",
+    "email": "manager000038@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000039",
+    "full_name": "Timothy Hoffman",
+    "email": "manager000039@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000040",
+    "full_name": "David Knight",
+    "email": "manager000040@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000041",
+    "full_name": "Jeffrey Ray",
+    "email": "manager000041@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000042",
+    "full_name": "Jared Drake",
+    "email": "manager000042@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000043",
+    "full_name": "Shawn Lawson",
+    "email": "manager000043@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000044",
+    "full_name": "Nicholas Ball",
+    "email": "manager000044@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000045",
+    "full_name": "Joseph Brown",
+    "email": "manager000045@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000046",
+    "full_name": "Brittany Henry",
+    "email": "manager000046@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000047",
+    "full_name": "Jamie Brown",
+    "email": "manager000047@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000048",
+    "full_name": "Kara Hickman",
+    "email": "manager000048@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000049",
+    "full_name": "Jennifer Coleman",
+    "email": "manager000049@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000050",
+    "full_name": "Patrick Cook",
+    "email": "manager000050@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000051",
+    "full_name": "Robin Williams DDS",
+    "email": "manager000051@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000052",
+    "full_name": "Daniel Martinez",
+    "email": "manager000052@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000053",
+    "full_name": "Christopher Mendoza",
+    "email": "manager000053@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000054",
+    "full_name": "James Brown",
+    "email": "manager000054@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000055",
+    "full_name": "Charles Petty",
+    "email": "manager000055@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000056",
+    "full_name": "Jorge Stevens",
+    "email": "manager000056@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000057",
+    "full_name": "Jonathon Duncan",
+    "email": "manager000057@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000058",
+    "full_name": "Teresa Combs",
+    "email": "manager000058@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000059",
+    "full_name": "Michael Hardin",
+    "email": "manager000059@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000060",
+    "full_name": "Ralph Hawkins",
+    "email": "manager000060@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000061",
+    "full_name": "Melissa Martin",
+    "email": "manager000061@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000062",
+    "full_name": "Roberto Stone",
+    "email": "manager000062@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000063",
+    "full_name": "Tina Ponce",
+    "email": "manager000063@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000064",
+    "full_name": "Juan Nelson",
+    "email": "manager000064@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000065",
+    "full_name": "Dustin Kelly",
+    "email": "manager000065@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000066",
+    "full_name": "Casey Gilbert",
+    "email": "manager000066@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000067",
+    "full_name": "Jessica White",
+    "email": "manager000067@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000068",
+    "full_name": "Shaun Stewart",
+    "email": "manager000068@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000069",
+    "full_name": "Walter Golden",
+    "email": "manager000069@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000070",
+    "full_name": "Michael Martinez",
+    "email": "manager000070@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000071",
+    "full_name": "Harry Bailey",
+    "email": "manager000071@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000072",
+    "full_name": "Gina Gonzalez",
+    "email": "manager000072@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000073",
+    "full_name": "Mr. Kyle Fritz",
+    "email": "manager000073@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000074",
+    "full_name": "Marc Chen",
+    "email": "manager000074@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000075",
+    "full_name": "Alice Clarke",
+    "email": "manager000075@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000076",
+    "full_name": "Gary Campbell",
+    "email": "manager000076@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000077",
+    "full_name": "Michael James",
+    "email": "manager000077@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000078",
+    "full_name": "Brian Warren",
+    "email": "manager000078@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000079",
+    "full_name": "Lindsay Thomas",
+    "email": "manager000079@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000080",
+    "full_name": "Hannah Ramirez",
+    "email": "manager000080@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000081",
+    "full_name": "Paul Andrews",
+    "email": "manager000081@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000082",
+    "full_name": "Kristin Stanton",
+    "email": "manager000082@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000083",
+    "full_name": "Alexis Rodriguez",
+    "email": "manager000083@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000084",
+    "full_name": "Amanda Dawson",
+    "email": "manager000084@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000085",
+    "full_name": "Frank Brooks",
+    "email": "manager000085@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000086",
+    "full_name": "Robert Johns",
+    "email": "manager000086@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000087",
+    "full_name": "Gregory Neal",
+    "email": "manager000087@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000088",
+    "full_name": "Holly Hopkins",
+    "email": "manager000088@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000089",
+    "full_name": "Amanda Lawson",
+    "email": "manager000089@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000090",
+    "full_name": "Daniel Chan",
+    "email": "manager000090@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000091",
+    "full_name": "Anthony Ross",
+    "email": "manager000091@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000092",
+    "full_name": "Scott Martin",
+    "email": "manager000092@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000093",
+    "full_name": "Stephanie Mclaughlin",
+    "email": "manager000093@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000094",
+    "full_name": "Stephen Humphrey",
+    "email": "manager000094@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000095",
+    "full_name": "Kathryn Brown",
+    "email": "manager000095@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000096",
+    "full_name": "Emily Cook",
+    "email": "manager000096@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000097",
+    "full_name": "Christopher Sexton",
+    "email": "manager000097@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000098",
+    "full_name": "Crystal Mccormick",
+    "email": "manager000098@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000099",
+    "full_name": "William Jensen",
+    "email": "manager000099@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000100",
+    "full_name": "Jennifer Collins MD",
+    "email": "manager000100@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000101",
+    "full_name": "Andrew Harmon",
+    "email": "manager000101@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000102",
+    "full_name": "Richard Franco",
+    "email": "manager000102@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000103",
+    "full_name": "Nicholas Conway",
+    "email": "manager000103@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000104",
+    "full_name": "Courtney Brown",
+    "email": "manager000104@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000105",
+    "full_name": "Alexander Simon",
+    "email": "manager000105@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000106",
+    "full_name": "Michael Cochran",
+    "email": "manager000106@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000107",
+    "full_name": "Samuel Olsen",
+    "email": "manager000107@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000108",
+    "full_name": "Leah Nixon",
+    "email": "manager000108@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000109",
+    "full_name": "Jesse Bennett",
+    "email": "manager000109@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000110",
+    "full_name": "Nancy Wilson",
+    "email": "manager000110@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000111",
+    "full_name": "Angela Mccoy",
+    "email": "manager000111@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000112",
+    "full_name": "Jennifer Parker",
+    "email": "manager000112@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000113",
+    "full_name": "Christopher Jackson",
+    "email": "manager000113@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000114",
+    "full_name": "Whitney Wright",
+    "email": "manager000114@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000115",
+    "full_name": "John Johnson",
+    "email": "manager000115@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000116",
+    "full_name": "Derek Mendez",
+    "email": "manager000116@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000117",
+    "full_name": "Justin Hendricks",
+    "email": "manager000117@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000118",
+    "full_name": "Brenda Roberts",
+    "email": "manager000118@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000119",
+    "full_name": "Nicholas Patterson",
+    "email": "manager000119@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000120",
+    "full_name": "Sarah Chavez",
+    "email": "manager000120@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000121",
+    "full_name": "Lori Campbell",
+    "email": "manager000121@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000122",
+    "full_name": "Jose Daniels",
+    "email": "manager000122@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000123",
+    "full_name": "James Harris",
+    "email": "manager000123@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000124",
+    "full_name": "Kathryn Blair",
+    "email": "manager000124@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000125",
+    "full_name": "Lorraine Taylor",
+    "email": "manager000125@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000126",
+    "full_name": "Tyler Davis",
+    "email": "manager000126@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000127",
+    "full_name": "Erica Mclean",
+    "email": "manager000127@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000128",
+    "full_name": "Emily Keller",
+    "email": "manager000128@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000129",
+    "full_name": "George Walker",
+    "email": "manager000129@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000130",
+    "full_name": "Lisa Henderson",
+    "email": "manager000130@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000131",
+    "full_name": "Brandon Terry",
+    "email": "manager000131@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000132",
+    "full_name": "Kyle Meyer",
+    "email": "manager000132@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000133",
+    "full_name": "Kenneth Keith",
+    "email": "manager000133@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000134",
+    "full_name": "Scott Parker",
+    "email": "manager000134@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000135",
+    "full_name": "Matthew Estrada",
+    "email": "manager000135@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000136",
+    "full_name": "William Jackson",
+    "email": "manager000136@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000137",
+    "full_name": "James Warren",
+    "email": "manager000137@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000138",
+    "full_name": "Dr. Nicholas Jackson",
+    "email": "manager000138@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000139",
+    "full_name": "Debra Valencia",
+    "email": "manager000139@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000140",
+    "full_name": "Shirley Leonard",
+    "email": "manager000140@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000141",
+    "full_name": "Jennifer Brown",
+    "email": "manager000141@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000142",
+    "full_name": "Theresa Wright",
+    "email": "manager000142@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000143",
+    "full_name": "Joseph Vance",
+    "email": "manager000143@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000144",
+    "full_name": "Jeffrey Garcia",
+    "email": "manager000144@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000145",
+    "full_name": "Jonathan Sullivan",
+    "email": "manager000145@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000146",
+    "full_name": "Jessica Walker",
+    "email": "manager000146@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000147",
+    "full_name": "Jeremy Gonzalez",
+    "email": "manager000147@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000148",
+    "full_name": "Angela Jones",
+    "email": "manager000148@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000149",
+    "full_name": "Steven Hayes",
+    "email": "manager000149@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000150",
+    "full_name": "Kimberly Bell",
+    "email": "manager000150@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000151",
+    "full_name": "Sylvia Ryan",
+    "email": "manager000151@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000152",
+    "full_name": "Christine Lyons",
+    "email": "manager000152@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000153",
+    "full_name": "Keith Leonard",
+    "email": "manager000153@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000154",
+    "full_name": "Mary Taylor",
+    "email": "manager000154@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000155",
+    "full_name": "Peter Roberts",
+    "email": "manager000155@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000156",
+    "full_name": "Christopher Arias",
+    "email": "manager000156@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000157",
+    "full_name": "Rickey Edwards",
+    "email": "manager000157@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000158",
+    "full_name": "Anna Dillon",
+    "email": "manager000158@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000159",
+    "full_name": "Laura Shields",
+    "email": "manager000159@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000160",
+    "full_name": "Jacqueline Rodriguez",
+    "email": "manager000160@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000161",
+    "full_name": "Sandra Martin",
+    "email": "manager000161@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000162",
+    "full_name": "Robert Hanson",
+    "email": "manager000162@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000163",
+    "full_name": "Elizabeth Schneider",
+    "email": "manager000163@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000164",
+    "full_name": "Alexandra Aguilar",
+    "email": "manager000164@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000165",
+    "full_name": "Kenneth Collins",
+    "email": "manager000165@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000166",
+    "full_name": "Antonio Lopez",
+    "email": "manager000166@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000167",
+    "full_name": "Angela Rojas",
+    "email": "manager000167@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000168",
+    "full_name": "Margaret Cochran",
+    "email": "manager000168@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000169",
+    "full_name": "Stacy Phillips",
+    "email": "manager000169@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000170",
+    "full_name": "Kenneth Alvarado",
+    "email": "manager000170@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000171",
+    "full_name": "Laura Stein",
+    "email": "manager000171@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000172",
+    "full_name": "Deborah Parker",
+    "email": "manager000172@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000173",
+    "full_name": "Shannon Johnson",
+    "email": "manager000173@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000174",
+    "full_name": "Michelle Sampson",
+    "email": "manager000174@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000175",
+    "full_name": "Carl Strickland",
+    "email": "manager000175@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000176",
+    "full_name": "Robert Chapman",
+    "email": "manager000176@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000177",
+    "full_name": "Cristina Huynh",
+    "email": "manager000177@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000178",
+    "full_name": "Joel Ramos",
+    "email": "manager000178@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000179",
+    "full_name": "Barbara Patton",
+    "email": "manager000179@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000180",
+    "full_name": "Sean Young",
+    "email": "manager000180@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000181",
+    "full_name": "Jordan Miller",
+    "email": "manager000181@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000182",
+    "full_name": "David Miller",
+    "email": "manager000182@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000183",
+    "full_name": "Shannon Bell",
+    "email": "manager000183@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000184",
+    "full_name": "Sandra Carson",
+    "email": "manager000184@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000185",
+    "full_name": "Rebecca Tran",
+    "email": "manager000185@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000186",
+    "full_name": "Timothy Vasquez",
+    "email": "manager000186@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000187",
+    "full_name": "David Garza",
+    "email": "manager000187@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000188",
+    "full_name": "Lori Compton",
+    "email": "manager000188@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000189",
+    "full_name": "Corey Chase",
+    "email": "manager000189@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000190",
+    "full_name": "Lori Anderson",
+    "email": "manager000190@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000191",
+    "full_name": "Sarah Fitzgerald",
+    "email": "manager000191@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000192",
+    "full_name": "Kenneth Ayers",
+    "email": "manager000192@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000193",
+    "full_name": "Jordan Long",
+    "email": "manager000193@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000194",
+    "full_name": "Craig King",
+    "email": "manager000194@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000195",
+    "full_name": "Nancy Murray",
+    "email": "manager000195@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000196",
+    "full_name": "Joshua Luna",
+    "email": "manager000196@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000197",
+    "full_name": "Martin Johnson",
+    "email": "manager000197@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000198",
+    "full_name": "Brandon Conway",
+    "email": "manager000198@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000199",
+    "full_name": "James Chang",
+    "email": "manager000199@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000200",
+    "full_name": "Kevin Villanueva",
+    "email": "manager000200@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000201",
+    "full_name": "Rhonda Kaiser",
+    "email": "manager000201@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000202",
+    "full_name": "Gina White",
+    "email": "manager000202@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000203",
+    "full_name": "Robert Wilcox",
+    "email": "manager000203@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000204",
+    "full_name": "Christopher Nelson",
+    "email": "manager000204@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000205",
+    "full_name": "Christopher Carpenter",
+    "email": "manager000205@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000206",
+    "full_name": "David Ramirez",
+    "email": "manager000206@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000207",
+    "full_name": "John George",
+    "email": "manager000207@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000208",
+    "full_name": "Ivan Smith",
+    "email": "manager000208@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000209",
+    "full_name": "Mindy Thompson",
+    "email": "manager000209@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000210",
+    "full_name": "Amanda Keith",
+    "email": "manager000210@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000211",
+    "full_name": "Jaime Burgess",
+    "email": "manager000211@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000212",
+    "full_name": "Jeremy Williams",
+    "email": "manager000212@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000213",
+    "full_name": "Lisa Gomez",
+    "email": "manager000213@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000214",
+    "full_name": "Jordan Flores Jr.",
+    "email": "manager000214@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000215",
+    "full_name": "Chelsea Armstrong",
+    "email": "manager000215@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000216",
+    "full_name": "Scott Roberts",
+    "email": "manager000216@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000217",
+    "full_name": "William Kidd",
+    "email": "manager000217@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000218",
+    "full_name": "Shelia Green",
+    "email": "manager000218@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000219",
+    "full_name": "Mark Moore",
+    "email": "manager000219@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000220",
+    "full_name": "Angela Dominguez",
+    "email": "manager000220@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000221",
+    "full_name": "Karla Jordan",
+    "email": "manager000221@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000222",
+    "full_name": "Willie Bradley",
+    "email": "manager000222@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000223",
+    "full_name": "Jennifer Barrett",
+    "email": "manager000223@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000224",
+    "full_name": "Melissa Byrd",
+    "email": "manager000224@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000225",
+    "full_name": "Karen Foster",
+    "email": "manager000225@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000226",
+    "full_name": "Christopher Conway",
+    "email": "manager000226@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000227",
+    "full_name": "Alexander Benitez",
+    "email": "manager000227@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000228",
+    "full_name": "Alisha Graves",
+    "email": "manager000228@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000229",
+    "full_name": "Jeremy Mays",
+    "email": "manager000229@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000230",
+    "full_name": "Christopher Garcia",
+    "email": "manager000230@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000231",
+    "full_name": "Richard Calhoun",
+    "email": "manager000231@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000232",
+    "full_name": "Kelly Frazier",
+    "email": "manager000232@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000233",
+    "full_name": "Tamara Valencia",
+    "email": "manager000233@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000234",
+    "full_name": "Stacy Trujillo",
+    "email": "manager000234@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000235",
+    "full_name": "Gina Cruz",
+    "email": "manager000235@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000236",
+    "full_name": "Joshua Hernandez",
+    "email": "manager000236@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000237",
+    "full_name": "Lisa Johnson",
+    "email": "manager000237@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000238",
+    "full_name": "Maria Lee",
+    "email": "manager000238@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000239",
+    "full_name": "Amy Horton",
+    "email": "manager000239@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000240",
+    "full_name": "Kevin Graham",
+    "email": "manager000240@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000241",
+    "full_name": "John Ortiz",
+    "email": "manager000241@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000242",
+    "full_name": "Brent Thomas",
+    "email": "manager000242@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000243",
+    "full_name": "Theresa Perkins",
+    "email": "manager000243@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000244",
+    "full_name": "Amy Bennett",
+    "email": "manager000244@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000245",
+    "full_name": "Mrs. Molly Young DDS",
+    "email": "manager000245@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000246",
+    "full_name": "Ashley Zavala",
+    "email": "manager000246@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000247",
+    "full_name": "Vincent Chavez",
+    "email": "manager000247@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000248",
+    "full_name": "Dawn Williams",
+    "email": "manager000248@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000249",
+    "full_name": "Kyle Daniels",
+    "email": "manager000249@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000250",
+    "full_name": "Joanne Murphy",
+    "email": "manager000250@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000251",
+    "full_name": "Shawn Keller",
+    "email": "manager000251@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000252",
+    "full_name": "Connor Duarte",
+    "email": "manager000252@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000253",
+    "full_name": "Thomas Bass",
+    "email": "manager000253@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000254",
+    "full_name": "David Cruz",
+    "email": "manager000254@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000255",
+    "full_name": "Teresa Howe",
+    "email": "manager000255@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000256",
+    "full_name": "Aaron Pearson",
+    "email": "manager000256@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000257",
+    "full_name": "Kelsey Chang",
+    "email": "manager000257@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000258",
+    "full_name": "Cristina Henson",
+    "email": "manager000258@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000259",
+    "full_name": "Emily Garcia",
+    "email": "manager000259@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000260",
+    "full_name": "Meagan Tran",
+    "email": "manager000260@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000261",
+    "full_name": "Hector Munoz",
+    "email": "manager000261@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000262",
+    "full_name": "Matthew Irwin",
+    "email": "manager000262@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000263",
+    "full_name": "Danielle Sanders",
+    "email": "manager000263@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000264",
+    "full_name": "Kathy Bush",
+    "email": "manager000264@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000265",
+    "full_name": "Carrie Miller",
+    "email": "manager000265@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000266",
+    "full_name": "Calvin Wagner",
+    "email": "manager000266@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000267",
+    "full_name": "Bradley Ramirez",
+    "email": "manager000267@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000268",
+    "full_name": "Steven Moss",
+    "email": "manager000268@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000269",
+    "full_name": "Pamela Stewart",
+    "email": "manager000269@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000270",
+    "full_name": "Christina Rosales",
+    "email": "manager000270@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000271",
+    "full_name": "Robert Little II",
+    "email": "manager000271@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000272",
+    "full_name": "Ricky Martinez",
+    "email": "manager000272@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000273",
+    "full_name": "Joseph Lee",
+    "email": "manager000273@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000274",
+    "full_name": "Sara Gonzalez",
+    "email": "manager000274@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000275",
+    "full_name": "Joel Brown",
+    "email": "manager000275@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000276",
+    "full_name": "Reginald King",
+    "email": "manager000276@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000277",
+    "full_name": "Douglas Johnson",
+    "email": "manager000277@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000278",
+    "full_name": "Tabitha Miller",
+    "email": "manager000278@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000279",
+    "full_name": "Anne Anderson",
+    "email": "manager000279@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000280",
+    "full_name": "Michael Ray",
+    "email": "manager000280@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000281",
+    "full_name": "Robert Vasquez",
+    "email": "manager000281@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000282",
+    "full_name": "Amy Gillespie",
+    "email": "manager000282@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000283",
+    "full_name": "Leslie Schmidt",
+    "email": "manager000283@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000284",
+    "full_name": "Joe Garcia",
+    "email": "manager000284@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000285",
+    "full_name": "Melissa Smith",
+    "email": "manager000285@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000286",
+    "full_name": "Michael Keller",
+    "email": "manager000286@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000287",
+    "full_name": "Charles Snow",
+    "email": "manager000287@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000288",
+    "full_name": "Cynthia Sanchez",
+    "email": "manager000288@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000289",
+    "full_name": "Julie Reynolds",
+    "email": "manager000289@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000290",
+    "full_name": "Phillip Jackson",
+    "email": "manager000290@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000291",
+    "full_name": "Melissa Ruiz",
+    "email": "manager000291@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000292",
+    "full_name": "Kevin Carter",
+    "email": "manager000292@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000293",
+    "full_name": "Debbie Robinson",
+    "email": "manager000293@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000294",
+    "full_name": "Matthew Stephens",
+    "email": "manager000294@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000295",
+    "full_name": "Julie Brown",
+    "email": "manager000295@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000296",
+    "full_name": "Emily Bailey",
+    "email": "manager000296@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000297",
+    "full_name": "David Lee",
+    "email": "manager000297@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000298",
+    "full_name": "Sharon Nolan",
+    "email": "manager000298@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000299",
+    "full_name": "Robert Hoover",
+    "email": "manager000299@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000300",
+    "full_name": "Dr. Luis Stewart",
+    "email": "manager000300@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000301",
+    "full_name": "Melissa Sampson",
+    "email": "manager000301@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000302",
+    "full_name": "Douglas Sherman",
+    "email": "manager000302@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000303",
+    "full_name": "Kelly Roman",
+    "email": "manager000303@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000304",
+    "full_name": "Daniel Evans",
+    "email": "manager000304@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000305",
+    "full_name": "Rachel Rogers",
+    "email": "manager000305@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000306",
+    "full_name": "Dustin Walker",
+    "email": "manager000306@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000307",
+    "full_name": "Paul Gray",
+    "email": "manager000307@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000308",
+    "full_name": "Katherine Gutierrez",
+    "email": "manager000308@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000309",
+    "full_name": "Renee Gonzales",
+    "email": "manager000309@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000310",
+    "full_name": "Jerry Clark",
+    "email": "manager000310@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000311",
+    "full_name": "Jessica Yates",
+    "email": "manager000311@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000312",
+    "full_name": "Hannah Evans",
+    "email": "manager000312@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000313",
+    "full_name": "Scott Cortez",
+    "email": "manager000313@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000314",
+    "full_name": "Brian Vasquez",
+    "email": "manager000314@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000315",
+    "full_name": "Michelle Woods",
+    "email": "manager000315@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000316",
+    "full_name": "Peter Anderson",
+    "email": "manager000316@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000317",
+    "full_name": "Amy King",
+    "email": "manager000317@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000318",
+    "full_name": "James Gutierrez",
+    "email": "manager000318@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000319",
+    "full_name": "Mark Anderson",
+    "email": "manager000319@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000320",
+    "full_name": "Denise Parker",
+    "email": "manager000320@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000321",
+    "full_name": "Brittney Sweeney",
+    "email": "manager000321@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000322",
+    "full_name": "Victoria Robertson",
+    "email": "manager000322@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000323",
+    "full_name": "Anthony Robinson",
+    "email": "manager000323@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000324",
+    "full_name": "John Lee",
+    "email": "manager000324@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000325",
+    "full_name": "James Compton",
+    "email": "manager000325@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000326",
+    "full_name": "Amanda Powell",
+    "email": "manager000326@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000327",
+    "full_name": "Darren Walsh",
+    "email": "manager000327@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000328",
+    "full_name": "Michelle Hanson",
+    "email": "manager000328@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000329",
+    "full_name": "Carlos Newton",
+    "email": "manager000329@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000330",
+    "full_name": "Dr. Mark Cooper",
+    "email": "manager000330@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000331",
+    "full_name": "Alexander Thompson",
+    "email": "manager000331@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000332",
+    "full_name": "Jennifer Erickson",
+    "email": "manager000332@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000333",
+    "full_name": "Valerie Hernandez",
+    "email": "manager000333@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000334",
+    "full_name": "Margaret Woods",
+    "email": "manager000334@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000335",
+    "full_name": "Christine Matthews",
+    "email": "manager000335@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000336",
+    "full_name": "Brittany Martinez",
+    "email": "manager000336@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000337",
+    "full_name": "James Combs MD",
+    "email": "manager000337@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000338",
+    "full_name": "Nicholas Allen",
+    "email": "manager000338@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000339",
+    "full_name": "Tiffany Kennedy",
+    "email": "manager000339@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000340",
+    "full_name": "Ann Khan",
+    "email": "manager000340@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000341",
+    "full_name": "Jason Stevenson",
+    "email": "manager000341@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000342",
+    "full_name": "Daniel Jones",
+    "email": "manager000342@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000343",
+    "full_name": "Thomas Harris",
+    "email": "manager000343@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000344",
+    "full_name": "Elizabeth Stephenson",
+    "email": "manager000344@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000345",
+    "full_name": "Danielle Hicks",
+    "email": "manager000345@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000346",
+    "full_name": "Donna Marsh",
+    "email": "manager000346@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000347",
+    "full_name": "Brian Downs",
+    "email": "manager000347@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000348",
+    "full_name": "Sarah Allen",
+    "email": "manager000348@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000349",
+    "full_name": "Tonya Foster",
+    "email": "manager000349@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000350",
+    "full_name": "Heather Gonzalez",
+    "email": "manager000350@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000351",
+    "full_name": "Stephanie Maddox",
+    "email": "manager000351@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000352",
+    "full_name": "Robert Martinez",
+    "email": "manager000352@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000353",
+    "full_name": "Juan Olson",
+    "email": "manager000353@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000354",
+    "full_name": "Amy Conrad",
+    "email": "manager000354@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000355",
+    "full_name": "Ms. Sharon Salazar",
+    "email": "manager000355@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000356",
+    "full_name": "Linda Goodwin",
+    "email": "manager000356@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000357",
+    "full_name": "Edward Richardson",
+    "email": "manager000357@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000358",
+    "full_name": "Angela White",
+    "email": "manager000358@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000359",
+    "full_name": "Chelsea Riley",
+    "email": "manager000359@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000360",
+    "full_name": "Erin Murphy",
+    "email": "manager000360@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000361",
+    "full_name": "Vincent Welch",
+    "email": "manager000361@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000362",
+    "full_name": "Doris Green",
+    "email": "manager000362@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000363",
+    "full_name": "Lynn Young",
+    "email": "manager000363@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000364",
+    "full_name": "Nicole Briggs",
+    "email": "manager000364@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000365",
+    "full_name": "Brandon Jackson",
+    "email": "manager000365@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000366",
+    "full_name": "Brandon Galvan",
+    "email": "manager000366@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000367",
+    "full_name": "Dennis Schaefer",
+    "email": "manager000367@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000368",
+    "full_name": "Mark Parker",
+    "email": "manager000368@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000369",
+    "full_name": "Maria Roman",
+    "email": "manager000369@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000370",
+    "full_name": "John Neal",
+    "email": "manager000370@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000371",
+    "full_name": "David Hobbs",
+    "email": "manager000371@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000372",
+    "full_name": "Adam Carson",
+    "email": "manager000372@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000373",
+    "full_name": "Vanessa Ochoa",
+    "email": "manager000373@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000374",
+    "full_name": "Lisa Hernandez",
+    "email": "manager000374@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000375",
+    "full_name": "Sandra Liu",
+    "email": "manager000375@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000376",
+    "full_name": "Kevin Savage",
+    "email": "manager000376@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000377",
+    "full_name": "Susan Hernandez",
+    "email": "manager000377@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000378",
+    "full_name": "Justin Bartlett",
+    "email": "manager000378@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000379",
+    "full_name": "Emily Shah",
+    "email": "manager000379@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000380",
+    "full_name": "Christine Fields",
+    "email": "manager000380@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000381",
+    "full_name": "Monica Contreras",
+    "email": "manager000381@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000382",
+    "full_name": "Shawn Hawkins",
+    "email": "manager000382@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000383",
+    "full_name": "Roy Watts",
+    "email": "manager000383@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000384",
+    "full_name": "Shawn Perkins",
+    "email": "manager000384@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000385",
+    "full_name": "Mary Moran",
+    "email": "manager000385@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000386",
+    "full_name": "Lisa Webster",
+    "email": "manager000386@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000387",
+    "full_name": "Lisa Hughes",
+    "email": "manager000387@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000388",
+    "full_name": "Tammy Long",
+    "email": "manager000388@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000389",
+    "full_name": "Zachary Jones",
+    "email": "manager000389@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000390",
+    "full_name": "Brian Scott",
+    "email": "manager000390@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000391",
+    "full_name": "Shirley Bautista",
+    "email": "manager000391@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000392",
+    "full_name": "Gina Koch",
+    "email": "manager000392@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000393",
+    "full_name": "Cameron Rojas",
+    "email": "manager000393@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000394",
+    "full_name": "Jessica Whitaker",
+    "email": "manager000394@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000395",
+    "full_name": "David Kerr",
+    "email": "manager000395@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000396",
+    "full_name": "Justin Frederick",
+    "email": "manager000396@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000397",
+    "full_name": "Gregory Park",
+    "email": "manager000397@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000398",
+    "full_name": "Robert Leach",
+    "email": "manager000398@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000399",
+    "full_name": "Jessica Ochoa",
+    "email": "manager000399@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000400",
+    "full_name": "Beverly Bates",
+    "email": "manager000400@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000401",
+    "full_name": "Patricia Calderon",
+    "email": "manager000401@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000402",
+    "full_name": "Stephen Maddox",
+    "email": "manager000402@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000403",
+    "full_name": "Andrew Gates",
+    "email": "manager000403@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000404",
+    "full_name": "Kyle Vaughn",
+    "email": "manager000404@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000405",
+    "full_name": "Joseph Burns",
+    "email": "manager000405@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000406",
+    "full_name": "James Butler",
+    "email": "manager000406@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000407",
+    "full_name": "Jose Lopez",
+    "email": "manager000407@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000408",
+    "full_name": "David Knight",
+    "email": "manager000408@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000409",
+    "full_name": "Susan Marshall",
+    "email": "manager000409@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000410",
+    "full_name": "Barbara Pittman",
+    "email": "manager000410@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000411",
+    "full_name": "Samantha Bates",
+    "email": "manager000411@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000412",
+    "full_name": "Fernando Lee",
+    "email": "manager000412@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000413",
+    "full_name": "Nathan Moreno Jr.",
+    "email": "manager000413@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000414",
+    "full_name": "Daniel Small",
+    "email": "manager000414@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000415",
+    "full_name": "Courtney Kim",
+    "email": "manager000415@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000416",
+    "full_name": "Donald Reynolds",
+    "email": "manager000416@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000417",
+    "full_name": "Tyler Floyd",
+    "email": "manager000417@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000418",
+    "full_name": "Charles Vargas",
+    "email": "manager000418@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000419",
+    "full_name": "Tricia Erickson",
+    "email": "manager000419@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000420",
+    "full_name": "Joshua Richards",
+    "email": "manager000420@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000421",
+    "full_name": "Zachary Gibbs",
+    "email": "manager000421@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000422",
+    "full_name": "Corey Contreras",
+    "email": "manager000422@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000423",
+    "full_name": "Melissa Pollard",
+    "email": "manager000423@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000424",
+    "full_name": "Angela Vaughn",
+    "email": "manager000424@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000425",
+    "full_name": "Sherry Higgins",
+    "email": "manager000425@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000426",
+    "full_name": "James Hart",
+    "email": "manager000426@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000427",
+    "full_name": "Tyler Arnold",
+    "email": "manager000427@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000428",
+    "full_name": "Breanna Jackson",
+    "email": "manager000428@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000429",
+    "full_name": "Mr. Christopher Valentine",
+    "email": "manager000429@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000430",
+    "full_name": "Jeffrey Henderson",
+    "email": "manager000430@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000431",
+    "full_name": "Janet Vasquez",
+    "email": "manager000431@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000432",
+    "full_name": "David Vaughan",
+    "email": "manager000432@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000433",
+    "full_name": "Joseph Parker",
+    "email": "manager000433@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000434",
+    "full_name": "Nicole Hansen",
+    "email": "manager000434@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000435",
+    "full_name": "William Moore",
+    "email": "manager000435@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000436",
+    "full_name": "Joseph Thompson MD",
+    "email": "manager000436@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000437",
+    "full_name": "Cesar Hurley",
+    "email": "manager000437@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000438",
+    "full_name": "Anne Robinson",
+    "email": "manager000438@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000439",
+    "full_name": "Kurt Brown",
+    "email": "manager000439@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000440",
+    "full_name": "Sara Cochran PhD",
+    "email": "manager000440@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000441",
+    "full_name": "Bruce Rodriguez",
+    "email": "manager000441@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000442",
+    "full_name": "Robert Bailey",
+    "email": "manager000442@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000443",
+    "full_name": "Lisa Simpson",
+    "email": "manager000443@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000444",
+    "full_name": "Samuel Davis",
+    "email": "manager000444@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000445",
+    "full_name": "Kathryn Martinez",
+    "email": "manager000445@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000446",
+    "full_name": "Joseph Wells",
+    "email": "manager000446@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000447",
+    "full_name": "Jennifer Mills",
+    "email": "manager000447@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000448",
+    "full_name": "Donald Palmer",
+    "email": "manager000448@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000449",
+    "full_name": "Brenda Clark",
+    "email": "manager000449@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000450",
+    "full_name": "Joshua Reed",
+    "email": "manager000450@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000451",
+    "full_name": "Yesenia Davis",
+    "email": "manager000451@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000452",
+    "full_name": "Katherine Campbell",
+    "email": "manager000452@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000453",
+    "full_name": "Seth Black",
+    "email": "manager000453@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000454",
+    "full_name": "Karen Swanson",
+    "email": "manager000454@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000455",
+    "full_name": "Alejandro Bradshaw",
+    "email": "manager000455@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000456",
+    "full_name": "Angela Hayes",
+    "email": "manager000456@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000457",
+    "full_name": "John Jones",
+    "email": "manager000457@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000458",
+    "full_name": "Brian Martinez",
+    "email": "manager000458@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000459",
+    "full_name": "Mrs. Melissa Bishop",
+    "email": "manager000459@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000460",
+    "full_name": "Nicole Patel",
+    "email": "manager000460@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000461",
+    "full_name": "Ronald Oliver",
+    "email": "manager000461@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000462",
+    "full_name": "Teresa Payne",
+    "email": "manager000462@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000463",
+    "full_name": "Stephanie Bailey",
+    "email": "manager000463@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000464",
+    "full_name": "Curtis Torres",
+    "email": "manager000464@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000465",
+    "full_name": "Christopher Williams",
+    "email": "manager000465@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000466",
+    "full_name": "Michael Sanchez PhD",
+    "email": "manager000466@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000467",
+    "full_name": "Thomas Grant",
+    "email": "manager000467@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000468",
+    "full_name": "Sharon Bruce",
+    "email": "manager000468@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000469",
+    "full_name": "James Coleman",
+    "email": "manager000469@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000470",
+    "full_name": "Mrs. Sherry Young",
+    "email": "manager000470@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000471",
+    "full_name": "Sean Smith",
+    "email": "manager000471@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000472",
+    "full_name": "Sherry Peterson",
+    "email": "manager000472@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000473",
+    "full_name": "Kimberly Coleman",
+    "email": "manager000473@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000474",
+    "full_name": "Derek Maldonado",
+    "email": "manager000474@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000475",
+    "full_name": "Michael Moss",
+    "email": "manager000475@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000476",
+    "full_name": "Jason Melendez",
+    "email": "manager000476@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000477",
+    "full_name": "Barbara Dodson",
+    "email": "manager000477@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000478",
+    "full_name": "Amanda Smith",
+    "email": "manager000478@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000479",
+    "full_name": "Erin Mccarthy",
+    "email": "manager000479@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000480",
+    "full_name": "Katie Jones",
+    "email": "manager000480@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000481",
+    "full_name": "James Drake",
+    "email": "manager000481@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000482",
+    "full_name": "Lori Bennett",
+    "email": "manager000482@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000483",
+    "full_name": "Brian Mitchell",
+    "email": "manager000483@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000484",
+    "full_name": "Colleen Lynn",
+    "email": "manager000484@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000485",
+    "full_name": "Christopher Brown",
+    "email": "manager000485@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000486",
+    "full_name": "Rhonda Morgan",
+    "email": "manager000486@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000487",
+    "full_name": "April Lee",
+    "email": "manager000487@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000488",
+    "full_name": "Mark Payne",
+    "email": "manager000488@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000489",
+    "full_name": "Hannah Gonzalez",
+    "email": "manager000489@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000490",
+    "full_name": "Gina Allen",
+    "email": "manager000490@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000491",
+    "full_name": "Jason Mitchell",
+    "email": "manager000491@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000492",
+    "full_name": "Patrick Ward",
+    "email": "manager000492@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000493",
+    "full_name": "Christina Crane",
+    "email": "manager000493@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000494",
+    "full_name": "Brian Anderson",
+    "email": "manager000494@example.com",
+    "department": "Product"
+  },
+  {
+    "manager_id": "MGR-000495",
+    "full_name": "Vickie Brown",
+    "email": "manager000495@example.com",
+    "department": "Human Resources"
+  },
+  {
+    "manager_id": "MGR-000496",
+    "full_name": "Diana Rodriguez",
+    "email": "manager000496@example.com",
+    "department": "Finance"
+  },
+  {
+    "manager_id": "MGR-000497",
+    "full_name": "Patrick Andrews",
+    "email": "manager000497@example.com",
+    "department": "Sales"
+  },
+  {
+    "manager_id": "MGR-000498",
+    "full_name": "Rodney King",
+    "email": "manager000498@example.com",
+    "department": "Customer Support"
+  },
+  {
+    "manager_id": "MGR-000499",
+    "full_name": "John Burns",
+    "email": "manager000499@example.com",
+    "department": "Engineering"
+  },
+  {
+    "manager_id": "MGR-000500",
+    "full_name": "Sherry Leonard",
+    "email": "manager000500@example.com",
+    "department": "Product"
+  }
+]

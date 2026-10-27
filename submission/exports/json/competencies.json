@@ -1,0 +1,42 @@
+[
+  {
+    "competency_id": "COMP-001",
+    "name": "Communication",
+    "description": "Measures employee communication"
+  },
+  {
+    "competency_id": "COMP-002",
+    "name": "Teamwork",
+    "description": "Measures employee teamwork"
+  },
+  {
+    "competency_id": "COMP-003",
+    "name": "Problem Solving",
+    "description": "Measures employee problem solving"
+  },
+  {
+    "competency_id": "COMP-004",
+    "name": "Ownership",
+    "description": "Measures employee ownership"
+  },
+  {
+    "competency_id": "COMP-005",
+    "name": "Technical Skills",
+    "description": "Measures employee technical skills"
+  },
+  {
+    "competency_id": "COMP-006",
+    "name": "Planning",
+    "description": "Measures employee planning"
+  },
+  {
+    "competency_id": "COMP-007",
+    "name": "Adaptability",
+    "description": "Measures employee adaptability"
+  },
+  {
+    "competency_id": "COMP-008",
+    "name": "Leadership",
+    "description": "Measures employee leadership"
+  }
+]

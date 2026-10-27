@@ -1,0 +1,16 @@
+[
+  {
+    "cycle_id": "CYCLE-2026-H1",
+    "name": "2026 First Half",
+    "start_date": "2026-01-01",
+    "end_date": "2026-06-30",
+    "status": "closed"
+  },
+  {
+    "cycle_id": "CYCLE-2026-H2",
+    "name": "2026 Second Half",
+    "start_date": "2026-07-01",
+    "end_date": "2026-12-31",
+    "status": "active"
+  }
+]
