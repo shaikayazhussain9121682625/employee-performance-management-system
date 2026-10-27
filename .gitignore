@@ -34,3 +34,7 @@ data/generated_v3/**/*.sql
 data/generated_test_v3/**/*.csv
 data/generated_test_v3/**/*.json
 data/generated_test_v3/**/*.sql
+*.pyc
+*.bak
+docs/backup_*/
+scripts/*before*

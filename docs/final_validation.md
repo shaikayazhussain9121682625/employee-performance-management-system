@@ -1,15 +1,23 @@
-# Final Validation Report
+﻿# Final Validation Record
 
-Employee Performance Management System
+This document records checks to run before submission.
 
-- Employees: 30,000
-- Managers: 500
-- Total imported rows: 175,812
-- Foreign-key violations: 0
-- Dataset validation: PASS
-- Ground-truth cases detected: 5 of 5
-- Backend tests: 9 passed
-- Frontend production build: PASS
-- CSV-to-SQLite import: PASS
+- [ ] Generated dataset validator passes.
+- [ ] Backend unit tests pass.
+- [ ] Frontend production build passes.
+- [ ] Importer CLI help runs successfully.
+- [ ] Database import tested against a separate database.
+- [ ] Foreign-key integrity checked after import.
+- [ ] README and schema documentation reviewed against the actual code.
+- [ ] Git diff reviewed; no secrets, local databases, or temporary backups staged.
+- [ ] Changes committed and pushed to the intended remote branch.
 
-The dataset is synthetic and intended for project demonstration and testing.
+Record actual results and dates below. Do not mark unchecked items as passed.
+
+## Results
+
+- Dataset validation: Pending
+- Backend tests: Pending
+- Frontend build: Pending
+- Database import and integrity: Pending
+- Git push: Pending
