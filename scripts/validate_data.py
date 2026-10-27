@@ -1,12 +1,13 @@
 import csv
 import json
+import os
 import re
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR / "data" / "generated"
-
-
+DATA_DIR = BASE_DIR / "data" / os.environ.get(
+    "VALIDATION_DATA_DIR", "generated"
+)
 def load_csv(filename):
     path = DATA_DIR / filename
 
@@ -286,8 +287,25 @@ def main():
             errors.append(f"Feedback {feedback_id} has unknown cycle")
 
         author_id = row.get("author_id", "").strip()
+        feedback_type = row.get("feedback_type", "").strip().lower()
+        employee_id = row.get("employee_id", "").strip()
 
-        if not author_id or author_id not in manager_ids:
+        if feedback_type == "manager":
+            valid_author = author_id in manager_ids
+        elif feedback_type == "self":
+            valid_author = (
+                author_id == employee_id
+                and author_id in employee_ids
+            )
+        elif feedback_type == "peer":
+            valid_author = (
+                author_id in employee_ids
+                and author_id != employee_id
+            )
+        else:
+            valid_author = False
+
+        if not valid_author:
             errors.append(f"Feedback {feedback_id} has invalid author")
 
         if not row.get("evidence_reference", "").strip():

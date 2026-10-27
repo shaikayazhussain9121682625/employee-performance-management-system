@@ -1,4 +1,4 @@
-Employee Performance Management System
+﻿Employee Performance Management System
 A full-stack employee performance management prototype for tracking employees, goals, key results, check-ins, performance reviews, competency feedback, development plans, and data-quality exceptions.
 The project uses synthetic data only. Its rule-based exception detection highlights suspicious or incomplete records for human review. It does not silently correct records or make automatic employment decisions.
 Contents
@@ -79,36 +79,36 @@ Five labelled edge cases are generated separately for validation. Ground-truth f
 Project Structure
 ```text
 employee-performance-system/
-├── backend/
-│   ├── app.py
-│   ├── config.py
-│   ├── extensions.py
-│   ├── import_data.py
-│   ├── models/
-│   ├── routes/
-│   ├── services/
-│   ├── tests/
-│   └── requirements.txt
-├── data/
-│   └── generated_v3/
-├── docs/
-│   └── schema.md
-├── frontend/
-│   ├── src/
-│   ├── package.json
-│   └── index.html
-├── prompt-history/
-│   └── prompts.md
-├── scripts/
-│   ├── check_goal_progress.py
-│   ├── export_sql.py
-│   ├── generate_data.py
-│   ├── migrate_workflows.py
-│   ├── validate_data.py
-│   └── verify_database.py
-├── tests/
-├── .gitignore
-└── README.md
+â”œâ”€â”€ backend/
+â”‚   â”œâ”€â”€ app.py
+â”‚   â”œâ”€â”€ config.py
+â”‚   â”œâ”€â”€ extensions.py
+â”‚   â”œâ”€â”€ import_data.py
+â”‚   â”œâ”€â”€ models/
+â”‚   â”œâ”€â”€ routes/
+â”‚   â”œâ”€â”€ services/
+â”‚   â”œâ”€â”€ tests/
+â”‚   â””â”€â”€ requirements.txt
+â”œâ”€â”€ data/
+â”‚   â””â”€â”€ generated_v3/
+â”œâ”€â”€ docs/
+â”‚   â””â”€â”€ schema.md
+â”œâ”€â”€ frontend/
+â”‚   â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ package.json
+â”‚   â””â”€â”€ index.html
+â”œâ”€â”€ prompt-history/
+â”‚   â””â”€â”€ prompts.md
+â”œâ”€â”€ scripts/
+â”‚   â”œâ”€â”€ check_goal_progress.py
+â”‚   â”œâ”€â”€ export_sql.py
+â”‚   â”œâ”€â”€ generate_data.py
+â”‚   â”œâ”€â”€ migrate_workflows.py
+â”‚   â”œâ”€â”€ validate_data.py
+â”‚   â””â”€â”€ verify_database.py
+â”œâ”€â”€ tests/
+â”œâ”€â”€ .gitignore
+â””â”€â”€ README.md
 ```
 Requirements
 Install the following tools before running the project:
