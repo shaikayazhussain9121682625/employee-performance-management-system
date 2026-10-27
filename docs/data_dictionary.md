@@ -4,7 +4,7 @@
 
 This document describes the CSV datasets generated for the Employee Performance Management System, including their purpose, columns, and relationships.
 
-All generated records are synthetic. The generation seed is `20261022`. Dataset counts and generation metadata are recorded in `data/generated/source_manifest.json`.
+All generated records are synthetic. The generation seed is `20261022`. The reference date is `2026-10-26`, and the generator version is `3.0`. Dataset counts and generation metadata are recorded in `data/generated_v3/source_manifest.json`.
 
 ## 2. Dataset Summary
 
@@ -21,6 +21,7 @@ All generated records are synthetic. The generation seed is `20261022`. Dataset 
 | `feedback.csv` | 5,000 | Competency and performance feedback |
 | `development_plans.csv` | 3,000 | Employee development actions |
 | `event_history.csv` | 2 | Recorded events and reasons |
+| `manager_assignment_history.csv` | 3,030 | Effective-dated employee-to-manager assignment history |
 | `ground_truth.csv` | 5 | Expected labels for injected edge cases |
 
 The project also generates `ground_truth.json` as a separate representation of expected edge-case labels.
@@ -217,7 +218,7 @@ These cases are expected test inputs. They should not be confused with unexpecte
 ## 6. Provenance and Reproducibility
 
 - Data type: Synthetic.
-- Generator version: `2.0`.
+- Generator version: `3.0`.
 - Seed: `20261022`.
 - Reference date: `2026-10-26`.
 - Generation metadata: `data/generated/source_manifest.json`.
