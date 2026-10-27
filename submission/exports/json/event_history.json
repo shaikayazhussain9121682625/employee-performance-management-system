@@ -6,7 +6,7 @@
     "record_id": "GOAL-EMP-000001-00001",
     "event_type": "created",
     "actor_id": "EMP-000001",
-    "event_time": "2026-10-01 09:00:00.000000",
+    "event_time": "2026-10-01T09:00:00",
     "reason": "Initial goal creation"
   },
   {
@@ -16,7 +16,7 @@
     "record_id": "GOAL-EMP-000001-00001",
     "event_type": "updated",
     "actor_id": "MGR-000001",
-    "event_time": "2026-10-02 10:00:00.000000",
-    "reason": null
+    "event_time": "2026-10-02T10:00:00",
+    "reason": ""
   }
 ]

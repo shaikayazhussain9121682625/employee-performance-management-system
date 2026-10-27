@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-10-27T05:22:37.746793+00:00",
+  "generated_at_utc": "2026-10-27T14:55:51.138612+00:00",
   "seed": 20261022,
-  "source_database": "data/final_verification.db",
+  "source_directory": "data/generated",
   "ground_truth_included": false,
   "record_counts": {
     "check_ins": 20000,
@@ -11,6 +11,7 @@
     "event_history": 2,
     "feedback": 5000,
     "goals": 10000,
+    "ground_truth_cases": 5,
     "key_results": 20000,
     "manager_assignment_history": 3030,
     "managers": 500,
@@ -18,6 +19,7 @@
     "reviews": 3000
   },
   "total_records": 67542,
+  "backup_directory": "submission\\exports\\backup_before_sync_20261027_202550",
   "files": [
     {
       "path": "csv/check_ins.csv",
@@ -36,8 +38,8 @@
     },
     {
       "path": "csv/employees.csv",
-      "size_bytes": 329091,
-      "sha256": "c2c8d83caf8011b2e155b952194875804b787178e73e7fe21ea9c2614a8f9f9a"
+      "size_bytes": 341638,
+      "sha256": "46b3f3dee47fef11c651000c259748e3e66c93347897c5406e613878e4be7b67"
     },
     {
       "path": "csv/event_history.csv",
@@ -66,8 +68,8 @@
     },
     {
       "path": "csv/managers.csv",
-      "size_bytes": 31786,
-      "sha256": "f237043c6db9859f9fea9bc4c20cdb5e5fbb2ef374b384cf6be6aca7d0a4bc6e"
+      "size_bytes": 33876,
+      "sha256": "fe2341d3ebd6825eefafbc0210efaef432ed1d4e46b363ad5725844e020cf579"
     },
     {
       "path": "csv/review_cycles.csv",
@@ -81,68 +83,68 @@
     },
     {
       "path": "json/check_ins.json",
-      "size_bytes": 5247189,
-      "sha256": "cc570a9a8235653ab5f8e49990cdf6e6b34418a0af2b6c0ddedc46172ead8f98"
+      "size_bytes": 5247185,
+      "sha256": "d41a49f9514e45c5360b143dd035a00787c295224ff0d1c1fefc08536e8ba2b0"
     },
     {
       "path": "json/competencies.json",
-      "size_bytes": 1011,
-      "sha256": "498c25fe64a33eb583f2d7f4375290e4413f3abb9ed9fca1a0dd4a6c914dc0d8"
+      "size_bytes": 1009,
+      "sha256": "9fdee0ca793dde78b721fcff857014beb0703801aee489caf7b73302e3f0c5e5"
     },
     {
       "path": "json/development_plans.json",
-      "size_bytes": 1210005,
-      "sha256": "848aa9e19932ab4c8f5076682d48b1202d2acb9e48438091984e91757af74301"
+      "size_bytes": 1195003,
+      "sha256": "085057213d9030d25ca47e4e6411cb4f11a4f15f76068547f1833d40f02e975b"
     },
     {
       "path": "json/employees.json",
-      "size_bytes": 884007,
-      "sha256": "6190d8a28e3757c16b3be3cfe11033e76c60079b406e480caf97c411e55e9341"
+      "size_bytes": 896552,
+      "sha256": "f9ce9dd72b4e7b5d78a488c0619c2fdf0890f1a52978c3dd5e392fdea6b23a6e"
     },
     {
       "path": "json/event_history.json",
-      "size_bytes": 578,
-      "sha256": "0d548ba74dd10d807623b8b2fc8c2bcd4b3b2ddbd3c65515f0bb85bfe228c310"
+      "size_bytes": 560,
+      "sha256": "100d715518aea6b235e14d408343b14ce9d7ab3fa323d5373f4d914e1fbf5496"
     },
     {
       "path": "json/feedback.json",
-      "size_bytes": 1778904,
-      "sha256": "de3d1c76e2b89abc06bc3a5309d54f05c7e09884b996f9799da3cd3384695abf"
+      "size_bytes": 1778898,
+      "sha256": "232fe68947695ea954472e0295abf5d2970935c50d19d4cc1f67d61fc3f91323"
     },
     {
       "path": "json/goals.json",
-      "size_bytes": 2538706,
-      "sha256": "030695eb186831d0f95b2cf8e19d764d53aed212e83615ce174fef9ace1cc933"
+      "size_bytes": 2538704,
+      "sha256": "872e2e72aa5e291aaee19242b777207714ca76724b3415e5dd11c3ac24871969"
     },
     {
       "path": "json/key_results.json",
-      "size_bytes": 4816059,
-      "sha256": "08f71aa7872d2dac76cadb6f16d1dfbc52d406bae0d5a91762ec1ce53e0c3b7b"
+      "size_bytes": 4816057,
+      "sha256": "70116aac800c983bfdddef0289c93ee782acd89dbc44a8a0dcb2f7dd6ae68602"
     },
     {
       "path": "json/manager_assignment_history.json",
-      "size_bytes": 833225,
-      "sha256": "850fdc40361542dbb9d6a799d19e284a9e1a509c19585e0adfed597c926816ee"
+      "size_bytes": 806013,
+      "sha256": "731106d7c55f44693ed241b091650faebbde440f60e2de333afcbeefc7cc13d3"
     },
     {
       "path": "json/managers.json",
-      "size_bytes": 77252,
-      "sha256": "af71b468a631de5a31aeae2866d34dd61d35e60ce63394891813338c3e605e72"
+      "size_bytes": 79340,
+      "sha256": "dca6e3314191e9e8a13d2f258ad535820a30b9c4bfbb4fadad6844332250aaef"
     },
     {
       "path": "json/review_cycles.json",
-      "size_bytes": 336,
-      "sha256": "0750bf59dc9716e00269a7aa4014a1fd624839be53a4e607f9a0a937b865c844"
+      "size_bytes": 334,
+      "sha256": "c464974bc74cb39abc76b216edbb8c8cf3deffd7b2358f0d45a8c8a2703103af"
     },
     {
       "path": "json/reviews.json",
-      "size_bytes": 685074,
-      "sha256": "1e1d7686e85976781af0d39f7aedc1553187d38fb1a47ca265936db477937867"
+      "size_bytes": 685072,
+      "sha256": "4900d7a97fc75a9cfb5f4cbaafbec32682182cc48354efd0082ff9aa72882b32"
     },
     {
       "path": "sql/employee_performance_seed.sql",
-      "size_bytes": 10053912,
-      "sha256": "cd6ba5569776fa768d0b2f693bb2d2b22689fedc34194778f11b348cf33c7658"
+      "size_bytes": 10068549,
+      "sha256": "758ad8cdfc9646382d675e6f0ad26f889e2493cee384370da974effa5010cd42"
     }
   ]
 }
